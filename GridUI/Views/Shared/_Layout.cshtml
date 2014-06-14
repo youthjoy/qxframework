@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/table.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.20.min.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery.form.min.js")" type="text/javascript"></script>
+</head>
+<body>
+    @using QX.Config
+    <script type="text/javascript">
+    @*    @Html.CheckSession()
+        function Reload()
+        {
+            alert("登录超时,请重新登录");
+            window.top.location = "/home/login";
+        }*@
+    </script>
+   
+    <div class="page">
+        <div id="header">
+
+            <div id="logindisplay">
+            </div>
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li>@Html.ActionLink("供电情况", "GD", "Report")</li>
+                    <li>@Html.ActionLink("发电情况", "FD", "Report")</li>
+                    <li>@Html.ActionLink("发供电数据对比", "SJDB", "Report")</li>
+                    <li>@Html.ActionLink("水文情况", "SWQK", "Report")</li>
+                    <li>@Html.ActionLink("电能质量", "DNZL", "Report")</li>
+                    <li>@Html.ActionLink("关口电量", "GKDL", "Report")</li>
+                    <li>@Html.ActionLink("统计分析", "Daily", "Data")</li>
+                    <li>@Html.ActionLink("安全记录", "Safe", "Data")</li>
+                    <li>@Html.ActionLink("日运行方式", "DataMode", "Data")</li>
+                    <li>@Html.ActionLink("停电计划执行情况", "SBDMain", "Data")</li>
+                    <li>@Html.ActionLink("跳闸统计", "TZ", "Data")</li>
+               @*     <li>@Html.ActionLink("系统维护", "Index", "Home")</li>*@
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            @RenderBody()
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+</body>
+</html>

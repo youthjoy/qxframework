@@ -1,0 +1,2083 @@
+﻿/*
+#Add By QB 2010-10-1
+#CSS:全局控制CSS样式表(绿色风格)
+#----------------------------------
+#Modify:
+#Version:1.0
+#----------------------------------
+*/
+
+
+body
+{
+    margin: 8px;
+    margin-top: 5px;
+    width: 97%;
+    font-family: @微软雅黑 !important;
+    font-size: 16px !important;
+}
+/**** 12-27 ***/
+#center
+{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.STYLE1
+{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.STYLE3
+{
+    font-size: 12px;
+    font-weight: bold;
+}
+.STYLE4
+{
+    color: #03515d;
+    font-size: 12px;
+}
+a:hover
+{
+    cursor: pointer;
+}
+/************************************* 按钮样式 ******************************************/
+input[type="text"]
+{
+    width: 150px;
+    height: 18px;
+    border: 1px solid #888;
+    vertical-align: top;
+}
+input[type="button"]
+{
+    height: 26px;
+    font-family: Arial;
+    font-size: 13px;
+    letter-spacing: 3px;
+    padding-bottom: 4px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-bottom: 11px;
+    border-left: solid 1px #5FAFAF;
+    border-right: solid 1px #5FAFAF;
+    border-top: solid 1px #5FAFAF;
+    border-bottom: none;
+    background-image: url(../images/btn.png);
+    color: #fff;
+    padding-top: 5px;
+    _border: solid1pxred;
+}
+input[type="button"]:hover
+{
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    background-image: url(../images/btn_over.png);
+    border-left: solid 1px #5FAFAF;
+    border-right: solid 1px #5FAFAF;
+    border-top: solid 1px #5FAFAF;
+    border-bottom: none; *border:none!important;
+}
+input[type="submit"]
+{
+    height: 26px;
+    font-family: Arial;
+    font-size: 13px;
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-bottom: 11px;
+    padding-bottom: 4px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: solid 1px #5FAFAF;
+    border-right: solid 1px #5FAFAF;
+    border-top: solid 1px #5FAFAF;
+    border-bottom: none;
+    background-image: url(../images/btn.png);
+    color: #fff;
+    background-repeat: repeat-x;
+    outline: none; *border:none;
+*padding-top:5px;
+}
+input[type="submit"]:hover
+{
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    background-image: url(../images/btn_over.png);
+    border-left: solid 1px #5FAFAF;
+    border-right: solid 1px #5FAFAF;
+    border-top: solid 1px #5FAFAF;
+    border-bottom: none; *border:none;
+}
+input[type="file"]
+{
+    font-family: Arial;
+    font-size: 15px;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+/***************/
+input[type="reset"]
+{
+    height: 26px;
+    font-family: Arial;
+    font-size: 13px;
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-bottom: 11px;
+    padding-bottom: 4px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: solid 1px #5FAFAF;
+    border-right: solid 1px #5FAFAF;
+    border-top: solid 1px #5FAFAF;
+    border-bottom: none;
+    background-image: url(../images/btn.png);
+    color: #fff;
+    background-repeat: repeat-x;
+    outline: none; *border:none;
+}
+input[type="reset"]:hover
+{
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    background-image: url(../images/btn_over.png);
+    border-left: solid 1px #5FAFAF;
+    border-right: solid 1px #5FAFAF;
+    border-top: solid 1px #5FAFAF;
+    border-bottom: none; *border:none;
+}
+
+/******************** 按钮样式 : 确定，取消，应用，编辑，删除 **************************/
+.button_style
+{
+    width: 60px;
+    height: 30px;
+    margin-left: 20px;
+    font: Arial;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*************************  去掉按钮点击后的虚线 没用-_-!! ********************************/
+/*.ui-widget :active { outline:0;}*/
+.ui-widget::-moz-focus-inner
+{
+    background-color: Transparent !important;
+}
+/*.ui-widget*{ outline:0;zoom:1;  background:#f2f2f2;}*/
+
+
+.tool_style
+{
+    margin-left: 213px;
+}
+
+/********************************  Toolbar 工具条 class **********************************/
+/*html ul{margin:0;padding:0;}*/
+.toolbar
+{
+    width: 100%;
+    height: 25px;
+    border: solid 1px #CADCE5;
+    font-size: 13px;
+    margin: 5px 5px 2px 0px;
+    background: #dbe8ef url(../images/toolbar.png) repeat-x;
+    -moz-border-radius: 3px 3px 3px 3px;
+}
+.toolbar ul
+{
+    _margin-bottom: -10px;
+    list-style-type: none;
+    padding-left: 1px;
+    position: relative;
+    _top: 2px;
+    bottom: 10px !important; *vertical-align:middle;*display:block;*height:40px;*padding-top:14px;*position:relative;*left:-40px;}
+
+.toolbar ul li
+{
+    margin-left: 3px;
+    margin-right: 30px;
+}
+.toolbar ul li.toolbar_add
+{
+    float: left;
+    background: url("../images/add.png") no-repeat;
+    background-position: 7px 2px;
+}
+.toolbar ul li.toolbar_edit
+{
+    float: left;
+    background: url("../images/33.gif") no-repeat;
+    background-position: 7px 2px;
+}
+.toolbar ul li.toolbar_delete
+{
+    float: left;
+    background: url("../images/11.gif") no-repeat;
+    background-position: 7px 2px;
+}
+.toolbar ul li.toolbar_view
+{
+    float: left;
+    background: url("../images/view_detailed.png") no-repeat;
+    background-position: 7px 2px;
+}
+.toolbar ul li.toolbar_import
+{
+    float: left;
+    background: url("../images/import.gif") no-repeat;
+    background-position: 7px 2px; /*隐藏导入*/
+    display: none;
+}
+.toolbar ul li.toolbar_export
+{
+    float: left;
+    background: url("../images/export.png") no-repeat;
+    background-position: 7px 2px; /*隐藏导出*/
+    display: none;
+}
+.toolbar ul li.toolbar_search
+{
+    float: left;
+    background: url("../images/search.png") no-repeat 7px 2px;
+    margin-left: 2px;
+}
+
+.toolbar ul li.toolbar_btn
+{
+    float: left;
+    background: url("../images/default.png") no-repeat 7px 3px;
+    margin-left: 2px;
+}
+
+.toolbar ul li.toolbar_btn1
+{
+    float: left;
+    background: url("../images/p.png") no-repeat 7px 3px;
+    margin-left: 2px;
+}
+.toolbar ul li.toolbar_btn2
+{
+    float: left;
+    background: url("../images/default.png") no-repeat 7px 3px;
+    margin-left: 2px;
+}
+.toolbar ul li.toolbar_btn3
+{
+    float: left;
+    background: url("../images/default.png") no-repeat 7px 3px;
+    margin-left: 2px;
+}
+.toolbar ul li.toolbar_btn4
+{
+    float: left;
+    background: url("../images/default.png") no-repeat 7px 3px;
+    margin-left: 2px;
+}
+
+.toolbar ul li a:hover
+{
+    border: solid 1px #7fcbc7;
+}
+.toolbar ul li img
+{
+    float: left;
+    margin-top: 2px;
+    border: none;
+    margin-right: 0px;
+}
+.toolbar ul li #search_txt
+{
+    margin-top: -3px;
+}
+
+.toolbar li a
+{
+    color: #216D6A;
+    text-decoration: none;
+    position: relative;
+    left: 23px;
+    _top: 2px;
+    padding-left: 3px;
+}
+
+
+/****************************工具条For_Chart*****************************************************************/
+
+/********************************  Toolbar 工具条 class **********************************/
+/*html ul{margin:0;padding:0;}*/
+.toolbar_chart
+{
+    width: 100%; /*height: 25px;*/
+    border: solid 1px #CADCE5;
+    font-size: 13px;
+    margin: 5px 5px 2px 0px;
+    background: #dbe8ef url(../images/toolbar.png) repeat;
+    -moz-border-radius: 3px 3px 3px 3px;
+}
+.toolbar_chart ul
+{
+    _margin-bottom: -10px;
+    list-style-type: none;
+    padding-left: 1px;
+    position: relative;
+    _top: 2px;
+    bottom: 10px !important; *vertical-align:middle;*display:block;*height:40px;*padding-top:14px;*position:relative;*left:-40px;}
+
+.toolbar_chart ul li
+{
+    margin-left: 3px;
+    margin-right: 5px;
+    margin-top: 5px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+.toolbar_chart ul li.toolbar_chart_add
+{
+    float: left;
+    background: url("../images/add.png") no-repeat;
+    background-position: 7px 2px;
+}
+.toolbar_chart ul li.toolbar_chart_edit
+{
+    float: left;
+    background: url("../images/33.gif") no-repeat;
+    background-position: 7px 2px;
+}
+.toolbar_chart ul li.toolbar_chart_delete
+{
+    float: left;
+    background: url("../images/11.gif") no-repeat;
+    background-position: 7px 2px;
+}
+.toolbar_chart ul li.toolbar_chart_view
+{
+    float: left;
+    background: url("../images/view_detailed.png") no-repeat;
+    background-position: 7px 2px;
+}
+.toolbar_chart ul li.toolbar_chart_import
+{
+    float: left;
+    background: url("../images/import.gif") no-repeat;
+    background-position: 7px 2px; /*隐藏导入*/
+    display: none;
+}
+.toolbar_chart ul li.toolbar_chart_export
+{
+    float: left;
+    background: url("../images/export.png") no-repeat;
+    background-position: 7px 2px; /*隐藏导出*/
+    display: none;
+}
+.toolbar_chart ul li.toolbar_chart_search
+{
+    float: left;
+    background: url("../images/search.png") no-repeat 7px 2px;
+    margin-left: 2px;
+}
+
+.toolbar_chart ul li.toolbar_chart_btn
+{
+    float: left;
+    background: url("../images/default.png") no-repeat 7px 3px;
+    margin-left: 2px;
+}
+
+.toolbar_chart ul li.toolbar_chart_btn1
+{
+    float: left;
+    background: url("../images/p.png") no-repeat 7px 3px;
+    margin-left: 2px;
+}
+.toolbar_chart ul li.toolbar_chart_btn2
+{
+    float: left;
+    background: url("../images/default.png") no-repeat 7px 3px;
+    margin-left: 2px;
+}
+.toolbar_chart ul li.toolbar_chart_btn3
+{
+    float: left;
+    background: url("../images/default.png") no-repeat 7px 3px;
+    margin-left: 2px;
+}
+.toolbar_chart ul li.toolbar_chart_btn4
+{
+    float: left;
+    background: url("../images/default.png") no-repeat 7px 3px;
+    margin-left: 2px;
+}
+
+.toolbar_chart ul li a:hover
+{
+    border: solid 1px #7fcbc7;
+}
+.toolbar_chart ul li img
+{
+    float: left;
+    margin-top: 2px;
+    border: none;
+    margin-right: 0px;
+}
+.toolbar_chart ul li #search_txt
+{
+    margin-top: -3px;
+}
+
+.toolbar_chart li a
+{
+    color: #216D6A;
+    text-decoration: none;
+    position: relative;
+    left: 23px;
+    _top: 2px;
+    padding-left: 3px;
+}
+
+
+/*********************************************************************************************/
+
+
+/********************** toolbar 工具条 按钮图标背景 id ************************************/
+/*
+#toolbar ul{ list-style-type:none; padding-left:1px; *vertical-align:middle; *display:block; *height:40px; *padding-top:14px;}
+#toolbar ul li{float:left; margin-left:3px; margin-right:30px;}
+#toolbar ul li.toolbar_add{float:left; background:url("../images/add.png") no-repeat; background-position:center;}
+#toolbar ul li.toolbar_edit{float:left; background:url("../images/33.gif") no-repeat; background-position:center;}
+#toolbar ul li.toolbar_delete{float:left; background:url("../images/11.gif") no-repeat; background-position:center;}
+#toolbar ul li.toolbar_import{float:left; background:url("../images/import.gif") no-repeat; background-position:center;}
+#toolbar ul li.toolbar_export{float:left; background:url("../images/export.png") no-repeat; background-position:center;}
+#toolbar ul li.toolbar_search{float:left; background:url("../images/search.png") no-repeat; background-position:7px 2px ; margin-left:5px;}
+*/
+/*
+#toolbar ul li a:hover{ border:solid 1px #7fcbc7;}
+#toolbar ul li img{float:left; margin-top:2px; border:none; margin-right:0px;}
+#toolbar ul li #search_txt{ margin-top:-3px;}
+*/
+/********************** 链接样式：'添加' '编辑'..操作下无下划线 ****************************/
+/*#toolbar li a{ color:#216D6A; text-decoration:none; position:relative; left:23px; padding-left:3px;}*/
+
+
+/************************************* 表单样式 ************************************/
+.FormStyle
+{
+    float: left;
+    width: 810px;
+    margin-left: 0px; *margin-top:-5px;}
+
+/************************************ 表单行的宽度 ************************************/
+.FormStyle td
+{
+    width: 380px;
+    height: 30px;
+}
+.form_label
+{
+    background-color: White;
+    width: 85px;
+    font-size: 13px;
+    font-family: Arial,sans-serif;
+    color: #333;
+    margin-left: 20px;
+}
+
+/********************************** id = leftSide **********************************/
+#leftSide
+{
+    width: auto;
+}
+#container
+{ *margin-bottom:10px;}
+/*#container td{ width:390px; margin-right:20px;}*/
+
+/********************************  左边树结构样式  ********************************/
+.left_tree
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #B2CDD2;
+    padding-top: 5px;
+    padding-left: 5px;
+    width: 200px;
+    overflow: auto;
+    height: 330px;
+    margin-right: 5px;
+    margin-left: 1px;
+    margin-bottom: 30px;
+}
+.left_tree a:hover
+{
+    cursor: pointer;
+}
+.left_tree a:active
+{
+    cursor: pointer;
+}
+.jstree-icon:hover
+{
+    cursor: pointer;
+}
+.jstree-icon:active
+{
+    cursor: pointer;
+}
+
+.ui-widget-content
+{
+    color: #222222;
+    width: 98%;
+}
+
+#gbox_grid
+{
+    margin-left: 1px;
+}
+
+/****************** 左边树 滚动条 **************************/
+.jstree-classic.jstree-focused
+{
+    height: 330px;
+    overflow: auto;
+}
+#parentData table
+{
+    float: left;
+}
+
+
+/* UI-Tab *//* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.ui-tabs
+{
+    margin-top: 5px;
+    position: relative;
+    padding: .3em 0.4em 0.1em 0.4em;
+    width: 100%;
+    height: 100%;
+}
+.ui-tabs .ui-tabs-nav
+{
+    height: 26px;
+    margin: -3px -5px;
+    padding: .2em .2em 3px;
+    border-bottom-color: white;
+}
+
+.ui-tabs .ui-tabs-nav li
+{
+    text-align: center;
+    list-style: none;
+    float: left;
+    position: relative;
+    top: 1px;
+    margin: 0 .2em 1px 0;
+    border-bottom: 0 !important;
+    padding: 0;
+    white-space: nowrap;
+    width: auto;
+    height: 24px;
+}
+/*** 12-30 width:auto ***/
+.ui-tabs .ui-tabs-nav li a
+{
+    width: auto /*79px 12-30*/;
+    position: relative;
+    bottom: 3px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.ui-tabs .ui-tabs-nav li a
+{ *padding-top:0.7em;}
+
+/************************** redmond.css-76 改变菜单选中时颜色 ****************************/
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited
+{
+    color: /*#216D6A*/ #167243;
+    text-decoration: none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected
+{
+    text-align: center;
+    background-color: #21A05F /*#4BAAA6*/;
+    margin-bottom: 0;
+    padding-bottom: 1px;
+    width: auto /* 110px 12-30 */;
+    height: 24px;
+    border-top-color: #10637B;
+    border-left-color: #10637B;
+    border-right-color: #10637B;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a
+{
+    cursor: text;
+}
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a
+{
+    cursor: pointer;
+}
+/* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-panel
+{
+    display: block;
+    border-width: 0;
+    padding: 5px;
+    padding-left: 0px;
+    height: 100%;
+}
+
+.ui-tabs .ui-tabs-hide
+{
+    display: none !important;
+}
+
+/******************************** 更改tab中的背景色 ********************************/
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active
+{
+    background: url("images/ui-bg_inset-hard_100_f5f8f9_1x100.png") repeat-x scroll 50% 50% #4BAAA6;
+    border: 1px solid #79B7E7;
+    color: #4BAAA6;
+    font-weight: bold;
+}
+
+/*去掉左边菜单栏点击时产生的虚线*/
+a
+{
+    outline: none;
+}
+a:visited
+{
+    color: #000000;
+    font-size: 12px;
+    outline: medium none;
+    text-decoration: none;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover
+{
+    color: #333;
+    text-decoration: underline;
+    outline: none;
+}
+.dtree a.node:visited, .dtree a.nodeSel:visited
+{
+    outline: none;
+}
+
+
+/******************************** 改变表格中字体颜色 ********************************/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+{
+    border: 1px solid #10637B /*#127940*/; /*background: url(images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x;*/
+    font-weight: bold;
+    color: #167243 /*10637B*/; /*** position:relative; bottom:2px; 12-31 ***/
+}
+
+/******************************** table-7 '基本信息'的背景显示 ********************************/
+legend
+{
+    display: block;
+    width: 100%;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    line-height: 1.7;
+    color: #154e4b;
+    background: #D8E6ED url("../images/right_03.gif") repeat-x;
+    border: 1px solid #B1C6CA;
+    border-bottom: none;
+    margin: 0;
+    position: relative;
+    left: -1.3px;
+    top: -2px;
+    padding-left: 15px;
+    padding-right: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px; *position:relative;*right:9px;*top:-8.5px;*width:97.8%;*left:-7px;-moz-border-radius:5px5px1px1px;
+}
+
+/*************************** table-2 表单标题的格式 *************************/
+fieldset
+{
+    width: auto;
+    border: 1px solid #B2CDD2;
+    border-top: none;
+    padding: 0px 10px 10px 0px;
+    margin: 0px 2px 10px 1px; *border-top:solid0px;
+}
+
+/****************** form表单调整 【采购订单】***************************/
+/*fieldset table tr td table tbody tr{ height:22px;}*//*** 12-30 影响到搜索栏中的分隔条的高度[仓库管理--收获] ***/
+fieldset table tr td table tbody tr td label.form_label
+{
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-top: 1px;
+    padding: 0px;
+    padding-left: 5px;
+}
+fieldset table tr td table tbody tr td span.div_texbox
+{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 1px;
+    padding-left: 5px;
+}
+fieldset table tr td span
+{
+    height: 21px;
+}
+fieldset table tr td span label.form_label
+{
+    margin-left: 29px;
+    margin-top: 1px;
+    margin-right: 0px;
+    padding-left: 5px;
+    padding-top: 0px;
+}
+fieldset table tr td span span.div_texbox
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    margin-top: 1px;
+}
+label.form_label
+{
+    margin-left: 25px;
+    margin-top: 1px;
+    margin-right: 0px;
+    padding-left: 5px;
+    padding-top: 0px;
+}
+span.div_texbox
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 1px;
+}
+
+#supplyInfoForm table tbody tr
+{
+    height: 21px;
+}
+#supplyInfoForm table tbody tr td
+{
+    height: 21px;
+}
+#supplyInfoForm table tbody tr td div
+{
+    height: 21px;
+}
+
+#PUD_MCode_modalMaterialContainer table tbody tr td span.div_texbox
+{
+    position: relative;
+    bottom: 3px;
+}
+#PUD_MCode_modalMaterialContainer table tbody tr td label.form_label
+{
+    margin-right: -15px;
+}
+#PUD_MCode_Material_div_confirm label.form_label
+{
+    margin-left: 0;
+}
+#PUD_MCode_Material_Search_btn
+{
+    margin-top: -2px;
+}
+#PUDetailsForm
+{
+    margin-left: 10px;
+}
+#PUD_MCode_modalMaterialContainer
+{
+    position: relative;
+    left: 15px;
+    margin-left: 10px;
+}
+#PUDetails
+{
+    /*left:-30px;*/
+    padding-left: 0px;
+}
+/***** 外加工管理 *****/
+/*#PUM_Form fieldset table tbody tr td table tbody tr td{height:20px;}*//*** 12-30 影响到搜索栏中的分隔条的高度 ***/
+#PUM_Form fieldset table tbody tr td table tbody tr td div.ui-paging-info
+{
+    height: 20px;
+}
+#PUDetailsForm table tbody tr td div
+{
+    height: 0;
+}
+
+/***************** jquery-ui-1.8.5.custom.css-71 鼠标经过菜单时改变背景颜色 ****************/
+.ui-state-hover .ui-state-hover a:hover
+{
+    color: #fff;
+    text-decoration: none;
+}
+.ui-state-hover:hover
+{
+    color: #216D6A;
+    text-decoration: none;
+    background-color: #fdf5ce;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+/***************************  ui.jqgrid.css-6 表头字体设置 ********************************/
+.ui-jqgrid .ui-jqgrid-title
+{
+    float: left;
+    margin: 0.1em 0 0.2em;
+    letter-spacing: 3px;
+    position: relative;
+    bottom: 4px;
+}
+
+/************************** 一般领用 下的table 定义类 .table_style1 *************************/
+.table_style
+{
+    border: solid 1px #B2CDD2;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+/******************************* '读取中... '样式 *******************************/
+.ui-jqgrid .loading
+{
+    border-width: 2px !important;
+    display: none;
+    font-weight: bold;
+    left: 45%;
+    margin: 5px;
+    padding: 6px;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    width: auto;
+    z-index: 101;
+    background: #21A05F /*4BAAA6*/;
+    border: solid 1px #67c5c1;
+    color: #FFF;
+}
+
+/**************** 库存管理下 的 入库管理 子菜单显示效果 定义类 .subtitle_style **************/
+.subtitle_style
+{
+    padding: 0;
+    background: url("../images/right_10.gif") repeat-x;
+    border-bottom: 1px solid #B2CDD2;
+    border-top: 1px solid #B2CDD2;
+}
+.subtitle_style:active
+{
+    background: url("../images/right_12.gif") repeat-x;
+    border: 1px solid #98B1C0;
+}
+
+/*********************** ui.jqgrid.css-134 ，grid里面的 查找 ***********************/
+.ui-searchFilter table td
+{
+    float: left;
+    margin-left: 5px;
+    padding: 1px;
+}
+.ui-searchFilter table
+{
+    margin: 0;
+    position: relative;
+    width: 385px;
+}
+.ui-searchFilter table thead td
+{
+    width: 97%;
+    margin-bottom: 5px;
+}
+/*12-30*/
+.ui-searchFilter .matchText
+{
+    margin-left: 15px;
+    float: left;
+}
+.ui-searchFilter .rulesText
+{
+    margin-right: 15px;
+}
+.ui-searchFilter table
+{
+    width: 450px;
+    padding-bottom: 8px;
+}
+.ui-searchFilter tbody
+{
+    margin-top: 5px;
+}
+
+#fbox_Dictgrid table thead td
+{
+    width: 285px;
+}
+#fbox_Dictgrid .matchText
+{
+    margin-left: 15px;
+}
+#fbox_Dictgrid .rulesText
+{
+    margin-right: 15px;
+}
+#fbox_Dictgrid table
+{
+    width: 300px;
+    padding-bottom: 8px;
+}
+#fbox_Dictgrid tbody
+{
+    margin-top: 5px;
+}
+/************************* 表格右下角的 搜索... 框**********************************/
+#fbox_grid table thead td
+{
+    width: 318px;
+}
+#fbox_grid table tfoot span
+{
+    width: 60px;
+    height: 20px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    padding-left: 5px;
+    margin-right: 2px;
+}
+#fbox_grid table tfoot span span
+{
+    width: 10px; *width:auto;*padding-right:8px;}
+#fbox_grid table tfoot span span .ui-icon .ui-icon-search
+{
+    width: 5px; *width:15px;}
+#fbox_grid table tfoot span span .ui-icon .ui-icon-arrowreturnthick-1-w
+{
+    width: 5px; *width:15px;}
+#fbox_grid table tfoot td
+{
+    text-align: center;
+    float: right;
+}
+
+
+
+/**********************************  导航背景图片显示  ***********************************/
+.ui-widget-header
+{
+    height: 22px;
+    background: #21A05F /*#4BAAA6*/ url("../images/right_03.gif") repeat-x scroll 0 0;
+    color: /*#216D6A*/ #167243;
+    font-weight: bold;
+}
+
+.demo
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px dashed #B2CDD2;
+    height: 370px;
+    margin-right: 10px;
+    overflow: auto;
+    padding-left: 5px;
+    padding-top: 10px;
+    width: 200px;
+}
+
+/******************************* 圆角 *********************************/
+.ui-corner-all
+{
+    -moz-border-radius: 5px 5px 1px 1px;
+}
+
+.icon_size
+{
+    height: 28;
+    width: 28px;
+}
+
+/************************** redmond.css-78 ***************************************/
+.ui-state-hover a, .ui-state-hover a:hover
+{
+    /* color: #1d5987; text-decoration: none;*/
+}
+
+/************************************* ui-jqgrid.css-11 *************************************/
+ui-jqgrid .ui-jqgrid-hbox
+{
+    float: left;
+    overflow: hidden;
+    padding-right: 2px;
+}
+
+/********************************** 提示框 *************************************************/
+/*********** 表单中的 帮助、提示图标 class 【每个图标定义一个div，图标放入其中】 *************/
+
+/* 1 帮助提示图标 路径(../images/help.png) */
+.icon_help
+{
+    background: url("../images/help.png") no-repeat;
+}
+
+/* 2 隐藏span标签内的帮助提示内容 */
+.icon_help span
+{
+    display: none;
+}
+
+/* 3 鼠标经过'帮助'图标时，弹出提示框【提示框内的内容写在span标签内：<div><span>帮助内容</span></div>】 */
+.icon_help:hover
+{
+    background: url("../images/help_hover.png") no-repeat;
+}
+.icon_help:hover span
+{
+    font: Arial 13px;
+    color: #555;
+    background-color: #fbfce9;
+    display: block;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #aaa;
+}
+
+/* error icon 隐藏 */
+.err_hide
+{
+    background: url("../images/err.png") no-repeat;
+    visibility: hidden;
+}
+
+/* error icon 显示 */
+.err_display
+{
+    display: inline;
+    background: url("../images/default.png") no-repeat;
+    width: 100px;
+    border: solid 0px black;
+    line-height: 30px !important; *width:20px!important;*position:relative;*top:2px!important;
+_left:3px;_top:-4px;_margin-left:0px;_margin-top:0px;_margin-bottom:0px;_line-height:16px;
+}
+
+/* 鼠标经过'错误'图标时，弹出提示框【提示框内的内容写在span标签内：<div><span>错误提示内容</span></div>】 */
+.err_display span
+{
+    display: none;
+}
+.err_display:hover span
+{
+    font: Arial 12px;
+    color: #555;
+    position: relative;
+    left: 160px; /*top:-2px;*/
+    display: block;
+    width: 100px;
+    padding: 0px;
+    border: 1px solid #aaa;
+    background-color: #fbfce9; *left:10px;bottom:50px;
+}/** 12-27 ***/
+/******************************************************************************************/
+
+/******* 原材料里面的 添加表单 border-color:-moz-use-text-color;*****************/
+.ui-jqdialog-content .CaptionTD
+{
+    border: none;
+    padding: 1px;
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 40%;
+}
+.ui-jqdialog-content .EditTable
+{
+    bottom: 40px;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    top: 10px;
+}
+.ui-jqdialog-content td.EditButton a
+{
+    width: 30px;
+}
+.ui-jqdialog-content td.navButton
+{
+    border: none;
+    width: 100px;
+}
+.ui-jqdialog-content .DataTD
+{
+    border: none;
+}
+.ui-jqdialog-content td.EditButton
+{
+    border: none;
+}
+
+/*左边菜单字体 ...*/
+.dtree
+{
+    font: Arial 12.6px;
+}
+.dtree .clip
+{
+    font: Arial 12.6px;
+    color: #777;
+}
+.dTreeNode
+{
+    margin-top: 3px;
+}
+a:link
+{
+    font-size: 12.6px;
+    text-decoration: none;
+}
+
+/******** 弹出icon  日期icon 文本框背景色 *********/
+.popup
+{
+    background: url("../images/pop.png") no-repeat;
+    background-position: right center;
+}
+.date_icon
+{
+    background: url("../images/date.png") no-repeat;
+    background-position: right center;
+}
+.date_icon:hover
+{
+    cursor: pointer;
+}
+.popup:hover
+{
+    cursor: pointer;
+}
+.TextBoxReadOnly
+{
+    background-color: #DDDDDD;
+    width: 150px;
+    height: 23px;
+    border: 1px solid #CCC;
+    vertical-align: top;
+    _margin-bottom: 0px;
+}
+
+/***************** 日期 *******************************/
+.ui-datepicker-calendar
+{
+    width: 200px;
+}
+#ui-datepicker-div
+{
+    width: 200px;
+}
+
+/************* 行政管理 ***********************/
+/*#mmenu{ margin-bottom:10px;}*/
+#mmenu #Add_folder
+{
+    margin-top: 0px;
+    position: relative;
+    bottom: -1px;
+}
+#mmenu #Edit_folder
+{
+    margin-top: 0px;
+    position: relative;
+    bottom: -1px;
+}
+#mmenu #Del_folder
+{
+    margin-top: 0px;
+    position: relative;
+    bottom: -1px;
+}
+
+/******************* 行政管理 label **************************/
+label
+{
+    background-color: #fff;
+    color: #333;
+    display: block;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    height: 20px;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-right: 2px;
+    margin-top: 3px;
+    margin-left: 20px;
+    padding-left: 6px;
+    padding-top: 7px;
+    width: 95px;
+}
+*html label
+{
+    display: inline;
+}
+/*for ie6 */
+
+
+/************ form 间距 **************
+#House_Usage_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Vehicles_Repair_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Vehicles_Examined_Form table tbody td{ width:350px; float:left;height: 21px;}
+#GM_Seal_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Accident_Record_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Accident_RecordTZ_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Document_Manageseek_Form table tbody td{ width:350px; float:left;height: 21px;}
+#PlantDamage_Record_Form table tbody td{ width:350px; float:left;height: 21px;}
+#CanteenHelp_Record_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Document_Manage_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Document_ManageF_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Other_Cost_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Document_Lendingseek_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Vehicles_Usage_Form table tbody td{ width:350px; float:left;height: 21px;}
+#EmptyPureWater_Manage_Form table tbody td{ width:350px; float:left;height: 21px;}
+#WaterRecipients_Record_Form table tbody td{ width:350px; float:left;height: 21px;}
+#WaterRecipients_Records_Form table tbody td{ width:350px; float:left;height: 21px;}
+#House_Cost_Form table tbody td{ width:350px; float:left;height: 21px;}
+#SEP_Record_Form table tbody td{ width:350px; float:left;height: 21px;}
+#TrafficAccident_Record_Form table tbody td{width:350px; float:left;height: 21px;}
+#TrafficAccident_Recordclaimant_Form table tbody td{width:350px; float:left;height: 21px;}
+#Work_Recipients_Form table tbody td{width:350px; float:left;height: 21px;}
+#Plant_Record_Form table tbody td{width:350px; float:left;height: 21px;}
+#PlantChanged_Record_Form table tbody td{width:350px; float:left;height: 21px;}
+#Bse_CanteenItem_Form table tbody td{width:350px; float:left;height: 21px;}
+#Fax_Record_Form table tbody td{width:350px; float:left;height: 21px;}
+#Telephone_Record_Form table tbody td{width:350px; float:left;height: 21px;}
+#Outreach_Info_Form table tbody td{width:350px; float:left;height: 21px;}
+#Outreach_Coordination_Form table tbody td{width:350px; float:left;height: 21px;}
+#Outreach_Coordination_Form input[type="button"]{ margin-top:25px;}
+#Document_Lending_Form table tbody td{width:350px; float:left;height: 21px;}
+#Document_Lendings_Form table tbody td{width:350px; float:left;height: 21px;}
+#Document_Movement_Form table tbody td{width:350px; float:left;height: 21px;}
+#Document_Manages_Form table tbody td{ width:350px;float:left; height:21px;}
+#Document_LendingF_Form table tbody td{width:350px;float:left; height:21px;}
+#Document_IssueRecord_Form table tbody td{width:350px;float:left; height:21px;}
+#BussinessReception_Record_Form table tbody td{width:350px;float:left; height:21px;}
+#MealReception_Record_Form table tbody td{width:350px;float:left; height:21px;}
+#HotelReception_Record_Form table tbody td{width:350px;float:left; height:21px;}
+*/
+
+.select
+{
+    padding: 0px;
+    width: 153px;
+}
+.ui-dialog .ui-dialog-titlebar
+{
+    height: 18px;
+    background-image: url("../images/right_031.gif");
+    margin: -2px;
+    padding: 0.2em 1em 0.5em /*12-30*/;
+    position: relative;
+}
+
+/********** Form表单底部按钮  ***********/
+.FormToolBar
+{
+    margin-top: 20px; /*float: right;*/ /*margin-right: 150px;*/
+}
+
+/*********** Form表单样式 ***********/
+.FormClass table tbody td
+{
+    width: 350px;
+    float: left;
+    height: 22px !important;
+    _height: 10px;
+    _clear: both;
+}
+*html .FormClass table tbody td
+{
+    height: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+}
+
+/************ 字典文本框 背景 *************/
+.textbox
+{
+    background-image: url("../images/16.png");
+    background-position: left center;
+    width: 285px;
+    background-repeat: no-repeat;
+    color: #999999;
+    font: 12px Arial,Helvetica,sans-serif;
+    padding: 3px 5px 3px 19px;
+}
+#dictform table tr td label
+{
+    width: 60px;
+    padding-top: 3px;
+}
+
+/*********** 表格 行高 **************/
+.ui-jqgrid .ui-jqgrid-htable th div
+{
+    position: relative;
+    top: -4px;
+}
+.ui-jqgrid .ui-jqgrid-hbox
+{
+    height: 22px; /*border-bottom: 1px solid; 12-31 */
+    bottom: -1px;
+    position: relative;
+}
+/*** 12-25 12-31***/
+.ui-jqgrid tr.jqgrow td
+{
+    height: 20px;
+    border-right: 1px solid #167243;
+    border-top: 1px solid #167243;
+}
+/*** 12-25 ***/
+
+.ui-dialog .ui-dialog-content
+{
+    position: relative; /* right: 10px;*/
+}
+/** 12-28 **/
+
+/*.Comm_Ref tr:after {content:"\0020";display:block;height:0;clear:both;} 
+.Comm_Ref div:after {content:"\0020";display:block;height:0;clear:both;}
+.Comm_Ref div span:after{content:"\0020";display:block;height:0;clear:both;}*/
+
+/***********  表格底部 ***********/
+.ui-jqgrid .ui-pg-input
+{
+    font-size: 0.8em;
+    height: 13px;
+    width: 45px;
+    margin-bottom: 15px;
+}
+.ui-pg-input
+{
+    margin-bottom: 1px;
+}
+
+.ui-jqgrid .ui-pg-button span
+{
+    margin: 1px 1px 17px;
+}
+.ui-jqgrid .ui-paging-info
+{
+    margin-bottom: 20px;
+}
+.ui-jqgrid .ui-pg-selbox
+{
+    margin-bottom: 16px;
+}
+
+.ui-icon-refresh
+{
+    position: relative;
+    bottom: 0px;
+}
+/*** 12-25 ***/
+.Comm_Ref .ui-icon-search
+{
+    position: relative;
+    bottom: 7px;
+}
+
+.Comm_Ref .ui-pg-button span
+{
+    margin-bottom: 28px;
+}
+.Comm_Ref .ui-pg-input
+{
+    margin-bottom: 8px;
+}
+.Comm_Ref .ui-paging-info
+{
+    margin-bottom: 28px;
+}
+.Comm_Ref .ui-pg-selbox
+{
+    margin-bottom: 25px;
+}
+.Comm_Ref .ui-icon-refresh
+{
+    position: relative;
+    bottom: 0px;
+}
+/*** 12-25 ***/
+.Comm_Ref .ui-icon-search
+{
+    position: relative;
+    bottom: 0px;
+}
+/*** 12-25 ***/
+.ui-jqgrid .ui-pg-table td
+{
+    vertical-align: top;
+}
+/*** 12-25 ***/
+/* textarea */
+.div_textarea textarea
+{
+    height: 72px;
+    width: 512px;
+    font-size: 12px;
+}
+.div_textarea
+{
+    width: 500px;
+}
+.div_textarea .err_display
+{
+    bottom: 50px;
+    position: relative;
+    left: 500px;
+    margin-left: 5px !important;
+}
+/*** 12-27 ****/
+.div_textarea .err_display:hover span
+{
+    position: relative;
+    bottom: 60px;
+    left: 20px;
+    width: 50px;
+}
+
+/* 日历 */
+.ui-datepicker-year
+{
+    position: relative;
+    left: 10px;
+    bottom: 1px;
+}
+.ui-datepicker-month
+{
+    position: relative;
+    top: -2px;
+    left: -10px;
+}
+/* 查找 */
+.ui-searchFilter table td input, .ui-searchFilter table td select
+{
+    float: left;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    margin-top: -2px;
+    width: auto;
+}
+
+.list_openlayer div.FormToolBar
+{
+    position: relative;
+}
+.comm_dept_container .jstree-classic.jstree-focused
+{
+    height: 250px;
+    padding-top: 0px;
+    border: 1px solid #ddd;
+    width: 280px;
+}
+.comm_dept_container .jstree.jstree-8.jstree-classic
+{
+    height: 250px;
+    overflow: auto;
+    width: 280px;
+}
+.comm_dept_container .jstree-classic.jstree-focused
+{
+}
+
+.comm_dept_container
+{
+    width: 298px;
+}
+.comm_dept_container input[type="button"]
+{
+    float: right;
+    margin-right: 20px;
+}
+.comm_emp_confirm
+{
+    float: right;
+}
+/*** 12-27 弹出框***/
+.comm_dept_tree.jstree.jstree-6.jstree-classic
+{
+    height: 200px;
+    border: 1px solid #DBE8EF;
+    width: 280px;
+}
+/*** 12-27 ****/
+.comm_dept_tree.jstree.jstree-4.jstree-classic
+{
+    height: 200px;
+    border: 1px solid #DBE8EF;
+    width: 280px;
+}
+/*** 12-27 ****/
+.comm_dept_tree.jstree.jstree-2.jstree-classic
+{
+    height: 200px;
+    border: 1px solid #DBE8EF;
+    width: 280px;
+}
+/*** 12-27 ****/
+.comm_dept_tree.jstree.jstree-3.jstree-classic
+{
+    height: 200px;
+    border: 1px solid #DBE8EF;
+    width: 280px;
+}
+/*** 12-27 ****/
+.comm_dept_tree.jstree.jstree-12.jstree-classic
+{
+    height: 200px;
+    border: 1px solid #DBE8EF;
+    width: 280px;
+}
+/*** 12-28 ****/
+.comm_dept_tree.jstree.jstree-10.jstree-classic
+{
+    height: 200px;
+    border: 1px solid #DBE8EF;
+    width: 280px;
+}
+/*** 12-28 ****/
+.comm_dept_tree.jstree.jstree-29.jstree-classic
+{
+    height: 200px;
+    border: 1px solid #DBE8EF;
+    width: 280px;
+}
+/*** 12-28 ****/
+.comm_dept_tree.jstree.jstree-15.jstree-classic
+{
+    height: 200px;
+    border: 1px solid #DBE8EF;
+    width: 280px;
+}
+/*** 12-28 ****/
+.comm_dept_tree.jstree.jstree-18.jstree-classic
+{
+    height: 200px;
+    border: 1px solid #DBE8EF;
+    width: 280px;
+}
+/*** 12-28 ****/
+.comm_dept_tree.jstree.jstree-13.jstree-classic
+{
+    height: 200px;
+    border: 1px solid #DBE8EF;
+    width: 280px;
+}
+/*** 12-30 ****/
+
+
+.Comm_Ref
+{
+    float: left;
+}
+/********** 弹出层 左边树 右边表格  *******/
+div.ui-dialog div table td
+{
+    vertical-align: top;
+}
+
+/************ 搜索栏的分割线 *******************/
+.ui-searchFilter .divider div
+{
+    background-color: #ddd;
+    border-top: 1px solid #dddddd;
+    width: 425px;
+}
+
+.ui-searchFilter .ui-icon-search
+{
+    bottom: 0px;
+    position: relative;
+}
+.ui-icon-search
+{
+    position: relative;
+    bottom: 0px;
+}
+/*** 12-25 ***/
+.ui-searchFilter .ui-reset
+{
+    height: 20px;
+}
+.ui-searchFilter .ui-search
+{
+    height: 20px;
+}
+.ui-widget-content .ui-corner-all tfoot td
+{
+    position: relative;
+    top: 5px;
+}
+
+/*********** 12-25表头左移问题 此方法未能解决问题 ************/
+/*.Comm_Ref .ui-jqgrid .ui-jqgrid-hdiv {
+    border-left: 0 none !important;
+    border-right: 0 none !important;
+    border-top: 0 none !important;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow:visible;
+}
+#gview_POgrid .ui-jqgrid .ui-jqgrid-hdiv{ overflow:visible;}*/
+
+/***************** 表格问题12-27 **********************/
+.ui-jqgrid .ui-jqgrid-hbox
+{
+    padding-right: 1px;
+}
+.ui-dialog .ui-dialog-content
+{
+    overflow: visible;
+    overflow-x: auto;
+}
+
+/*************** 12-28 选仓库 *********************/
+/*.jstree.jstree-0.jstree-classic{ height:200px;border: 1px solid #DBE8EF;width: 280px;}*//*** 12-28 ****/
+/*.jstree.jstree-0.jstree-classic.jstree-focused{ height:200px;border: 1px solid #DBE8EF;width: 290px;}*//*** 12-28 ****/
+.jstree.jstree-1.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-2.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-7.jstree-focused.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-7.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-4.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-3.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-5.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-6.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-14.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-9.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-31.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-16.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-19.jstree-focused.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-17.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-19.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-8.jstree-focused.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-8.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-28 left ****/
+.jstree.jstree-13.jstree-focused.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-30 left ****/
+.jstree.jstree-11.jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-30 left ****/
+.jstree.jstree-29 jstree-classic
+{
+    height: 250px;
+    border: 1px solid #DBE8EF;
+}
+/*** 12-30 left ****/
+.jstree.jstree-0.jstree-classic
+{
+    /*height: 250px; 	border: 1px solid #DBE8EF;*/
+}
+/*** 12-31 left ****/
+/**** 12-30 合同管理 添加 *****/
+div.ui-tabs-panel.ui-widget-content.ui-corner-bottom td
+{
+    vertical-align: top;
+}
+/***** 12-30 表头 错位 *********/
+.ui-jqgrid .ui-jqgrid-hdiv
+{
+    clear: both;
+}
+
+
+/*价格信息列表样式 */
+.PriceSelected
+{
+    background-color: #CCC;
+}
+.DocmentsWidth
+{
+    width: 800px;
+    overflow: hidden;
+}
+
+.DocmentsWidthTab
+{
+    width: 790px;
+    overflow: hidden;
+}
+
+.Table_Container
+{
+    width: 98%;
+    height: 25px;
+    border: solid 1px #CADCE5;
+    font-size: 13px;
+    background: #dbe8ef url(../images/toolbar.png) repeat-x;
+    -moz-border-radius: 3px 3px 3px 3px;
+}
+
+.scroll
+{
+    width: 100%;
+}
+
+.jstree.jstree-0.jstree-classic
+{
+    width: 100%;
+}
+
+/*Loading加载层*/
+#LoadContainer
+{
+    border: solid 3px #D1EAE7;
+    line-height: 40px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+}
+#LoadText
+{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    background-color: #2E8E5E;
+    color: White;
+    font-weight: bold;
+}
+/**********************************列表中的颜色设置****************************************************/
+/**************审核状态配色0207**********************/
+.recordAuditing
+{
+    background-color: #20F856;
+}
+.recordOnAudit
+{
+    background-color: #C5FF95;
+}
+.recordLitter
+{
+    background-color: #FF5991;
+}
+
+/**************结算单未确认颜色配置**********************/
+.recordConfirming
+{
+    background-color: #C5FF95;
+}
+
+/**************设备中的颜色设置**********************/
+.recordEquMaintain /*维修中*/
+{
+    background-color: #524958;
+}
+.recordEquDelete /*报废*/
+{
+    background-color: #D80053;
+}
+.recordEquReturn /*已退货*/
+{
+    background-color: #D80053;
+}
+.recordEquUsed /*使用中*/
+{
+    background-color: #C5FF95;
+}
+.recordEquUnused /*未使用*/
+{
+    /*background-color: #C5FF95;*/
+}
+/**************物料数量预警设置**********************/
+.recordMaterialLessLow /*物料太少时的预警*/
+{
+    background-color: #D80053;
+}
+/**************设备领用中的颜色设置**********************/
+.recordEquLysed /*已被领用*/
+{
+    background-color: #C5FF95;
+}
+.recordEquLynused /*可以领用*/
+{
+    background-color: #FF5991;
+}
+/**************车辆颜色设置**********************/
+.recordVLDelete /*报废*/
+{
+    background-color: #D80053;
+}
+.recordVLUnused /*待命*/
+{
+    background-color: #C5FF95;
+}
+.recordVLbreak /*休息*/
+{
+    background-color: #FF5991;
+}
+
+
+/***************供应商结算单样式**************************/
+.txtCompany
+{
+    line-height: 25px;
+    margin-top: 8px;
+}
+.divCompany
+{
+    height: 30px;
+    line-height: 25px;
+    overflow: hidden;
+}
+/***************生产计划样式**************************/
+.recordOpen
+{
+    background-color: #20F856;
+}
+.recordNoOpen
+{
+    background-color: #C5FF95;
+}
+/***************资产维修记录处理样式**************************/
+.recordDispose
+{
+    background-color: #20F856;
+}
+.recordNoDispose
+{
+    background-color: #FFFFFF;
+}
+
+/********库存转储********/
+.ElementError
+{
+    background-image: url("../images/err.png");
+    background-repeat: no-repeat;
+}
+.ElementErrorClear
+{
+    background-image: none;
+}
+
+
+/*********通用弹出树**************/
+
+.CommTree
+{
+    width: 300px;
+    height: 400px;
+}
+.Sys_Link
+{
+    text-decoration: underline;
+    border-bottom: dotted 1px blue;
+}
+
+
+/***********快捷方式样式************************/
+
+
+
+/***********用户桌面样式**********************/
+#Desktop
+{
+    font-size: 12px !important;
+}
+#Desktop a:link #Desktop a:active
+{
+    font-size: 12px !important;
+    text-decoration: underline;
+}
+#Desktop_TopArea
+{
+    width: 100%;
+    height: 190px;
+    border: solid 1px #CADCE5;
+    margin-top: 10px;
+}
+#Desktop_TopArea fieldset li
+{
+    float: left;
+    width: 23%;
+    font-size: 12px;
+    margin-left: 15px;
+    list-style-type: none;
+    line-height: 25px;
+}
+#Desktop_TopArea fieldset
+{
+    float: left;
+    width: 80%;
+    margin: 0 auto;
+    background: none;
+    border: none;
+    border-color: Window;
+}
+#Desktop_TopArea fieldset legend
+{
+    background: none;
+    border-style: dotted;
+}
+
+#Desktop_MainArae
+{
+    width: 100%;
+    height: 300px;
+    border: solid 0px #CADCE5;
+    margin-top: 10px;
+    overflow: hidden;
+}
+#Desktop_LeftArea
+{
+    width: 49%;
+    float: left;
+    height: 99%;
+    border: solid 1px #CADCE5;
+}
+#Desktop_LeftArea li
+{
+    float: left;
+    width: 45%;
+    font-size: 12px;
+    margin-left: 15px;
+    list-style-type: none;
+    line-height: 25px;
+}
+#Desktop_RightArea
+{
+    width: 49%;
+    float: right;
+    height: 99%;
+    border: solid 1px #CADCE5;
+}
+.Desktop_Tool
+{
+    width: 100%;
+    height: 29px;
+    line-height: 29px;
+    vertical-align: middle;
+    background: #CADCE5 url(../images/right_03.gif) repeat-x scroll 0 0;
+    font-size: 12px;
+}

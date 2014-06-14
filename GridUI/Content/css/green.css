@@ -1,0 +1,360 @@
+﻿body
+{
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+#center { MARGIN-RIGHT: auto; MARGIN-LEFT: auto; } 
+
+.STYLE1
+{
+    font-size: 12px;
+}
+.STYLE3
+{
+    font-size: 12px;
+    font-weight: bold;
+}
+.STYLE4
+{
+    color: #03515d;
+    font-size: 12px;
+}
+/************************************* 按钮样式 ******************************************/
+input[type="text"]{ width: 150px; height:18px; border: 1px solid #888; vertical-align:top; }
+input[type="button"]
+{
+    height:26px;font-family:Arial; font-size:13px; letter-spacing:3px;  padding-bottom:4px; font-weight:bold;
+    text-align:center;vertical-align:middle;  margin-top:8px; margin-left:20px;margin-bottom:11px;border-left:solid 1px #5FAFAF; border-right:solid 1px #5FAFAF; border-top:solid 1px #5FAFAF; border-bottom:none;
+    background-image:url(../images/btn.png); color:#fff; background-repeat:repeat-x;
+   *border:none; *padding-top:5px;
+}
+input[type="button"]:hover
+{  background-color:#fff;  outline:none; cursor:pointer;
+   background-image:url(../images/btn_over.png); 
+   border-left:solid 1px #5FAFAF; border-right:solid 1px #5FAFAF; border-top:solid 1px #5FAFAF; border-bottom:none;
+   *border:none;
+}
+input[type="submit"]
+{   
+    height:26px;font-family:Arial; font-size:13px; margin-top:8px; margin-left:20px; margin-bottom:11px; padding-bottom:4px; font-weight:bold;
+    letter-spacing:3px;  text-align:center; vertical-align:middle; border-left:solid 1px #5FAFAF; border-right:solid 1px #5FAFAF; border-top:solid 1px #5FAFAF; border-bottom:none;
+    background-image:url(../images/btn.png); color:#fff; background-repeat:repeat-x; outline:none;
+   *border:none;*padding-top:5px;
+ }
+input[type="submit"]:hover
+{  background-color:#fff; outline:none;cursor:pointer;
+   background-image:url(../images/btn_over.png); 
+   border-left:solid 1px #5FAFAF; border-right:solid 1px #5FAFAF; border-top:solid 1px #5FAFAF; border-bottom:none;
+   *border:none;
+} 
+ input[type="file"]{font-family:Arial; font-size:15px; margin-left:8px;margin-top:8px;}
+ /***************/
+ input[type="reset"]
+{   
+    height:26px;font-family:Arial; font-size:13px; margin-top:8px; margin-left:20px; margin-bottom:11px; padding-bottom:4px; font-weight:bold;
+    letter-spacing:3px;  text-align:center; vertical-align:middle; border-left:solid 1px #5FAFAF; border-right:solid 1px #5FAFAF; border-top:solid 1px #5FAFAF; border-bottom:none;
+    background-image:url(../images/btn.png); color:#fff; background-repeat:repeat-x; outline:none;
+     *border:none;
+ }
+input[type="reset"]:hover
+{  background-color:#fff; outline:none;cursor:pointer;
+   background-image:url(../images/btn_over.png); 
+   border-left:solid 1px #5FAFAF; border-right:solid 1px #5FAFAF; border-top:solid 1px #5FAFAF; border-bottom:none;
+   *border:none;
+}  
+/******************** 按钮样式 : 确定，取消，应用，编辑，删除 **************************/
+.button_style
+{ width:60px;height:30px; margin-left:20px; font:Arial; font-size:13px;letter-spacing:3px; text-align:center; vertical-align:middle;  }
+
+/*************************  去掉按钮点击后的虚线 没用-_-!! ********************************/
+.ui-widget :active { outline:0; }
+.ui-widget::-moz-focus-inner{ background-color:Transparent!important;}
+.ui-widget*{ outline:0;zoom:1; /* background:#f2f2f2;*/}
+
+     
+.tool_style{ margin-left:213px;}
+
+/********************************  Toolbar 工具条 class **********************************/
+.toolbar{ width:98%;height:40px;*height:40px;border:solid 1px #CADCE5;font-size:13px;margin:2px 5px 5px 1px;background:#dbe8ef url(../images/toolbar.png) repeat-x;-moz-border-radius:3px 3px 3px 3px;}
+.toolbar ul{ list-style-type:none; padding-left:1px; *vertical-align:middle; *display:block; *height:40px; *padding-top:14px; *position:relative; *left:-40px;}.toolbar ul li{float:left; margin-left:3px; margin-right:30px;}
+.toolbar ul li.toolbar_add{float:left; background:url("../images/add.png") no-repeat; background-position:center;}
+.toolbar ul li.toolbar_edit{float:left; background:url("../images/33.gif") no-repeat; background-position:center;}
+.toolbar ul li.toolbar_delete{float:left; background:url("../images/11.gif") no-repeat; background-position:center;}
+.toolbar ul li.toolbar_import{float:left; background:url("../images/import.gif") no-repeat; background-position:center;}
+.toolbar ul li.toolbar_export{float:left; background:url("../images/export.png") no-repeat; background-position:center;}
+.toolbar ul li.toolbar_search{float:left; background:url("../images/search.png") no-repeat; background-position:7px 0px; margin-left:2px;}
+
+
+
+.toolbar ul li a:hover{ border:solid 1px #7fcbc7;}
+.toolbar ul li img{float:left; margin-top:2px; border:none; margin-right:0px;}
+.toolbar ul li #search_txt{ margin-top:-3px;}
+
+.toolbar li a{ color:#216D6A; text-decoration:none; position:relative; left:23px; padding-left:3px;}
+/*********************************************************************************************/
+
+
+/********************** toolbar 工具条 按钮图标背景 id ************************************/
+#toolbar ul{ list-style-type:none; padding-left:1px; *vertical-align:middle; *display:block; *height:40px; *padding-top:14px;}
+#toolbar ul li{float:left; margin-left:3px; margin-right:30px;}
+#toolbar ul li.toolbar_add{float:left; background:url("../images/add.png") no-repeat; background-position:center;}
+#toolbar ul li.toolbar_edit{float:left; background:url("../images/33.gif") no-repeat; background-position:center;}
+#toolbar ul li.toolbar_delete{float:left; background:url("../images/11.gif") no-repeat; background-position:center;}
+#toolbar ul li.toolbar_import{float:left; background:url("../images/import.gif") no-repeat; background-position:center;}
+#toolbar ul li.toolbar_export{float:left; background:url("../images/export.png") no-repeat; background-position:center;}
+#toolbar ul li.toolbar_search{float:left; background:url("../images/search.png") no-repeat; background-position:7px 2px /*157px 1px*/; margin-left:5px;}
+
+#toolbar ul li a:hover{ border:solid 1px #7fcbc7;}
+#toolbar ul li img{float:left; margin-top:2px; border:none; margin-right:0px;}
+#toolbar ul li #search_txt{ margin-top:-3px;}
+
+/********************** 链接样式：'添加' '编辑'..操作下无下划线 ****************************/
+#toolbar li a{ color:#216D6A; text-decoration:none; position:relative; left:23px; padding-left:3px;}
+
+/*********************************************************************************************/
+/*********************************************************************************************/
+
+
+/************************************* 表单样式 ************************************/
+.FormStyle{ float:left; width:810px; margin-left:30px;}
+
+/************************************ 表单行的宽度 ************************************/
+.FormStyle td{ width:380px;height:30px;      }
+.form_label{ background-color:White;  width:85px;font-size:13px;font-family:Arial,sans-serif;color:#333;margin-left:20px;}
+
+/********************************** id = leftSide **********************************/
+#leftSide{ width:auto; }
+#container{ *margin-bottom:10px;}
+#container td{ width:390px; margin-right:20px;}
+
+ /********************************  左边树结构样式  ********************************/
+.left_tree
+{  background: none repeat scroll 0 0 white;border:1px solid #B2CDD2; padding-top:10px;padding-left:5px; width: 200px; overflow:scroll; 
+   height:330px;margin-right:5px;margin-left:1px; margin-bottom:30px;}
+.left_tree a:hover{ cursor:pointer;}
+.left_tree a:active{ cursor:pointer;}
+.jstree-icon:hover{ cursor:pointer;}
+.jstree-icon:active{ cursor:pointer;}
+   
+.ui-widget-content { color :#222222; width:98%; }
+
+#gbox_grid{ margin-left:1px;}
+
+/* UI-Tab */ /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.ui-tabs {  position: relative; padding: .3em 0.4em 2em 0.4em; width:100%;height:100%; }
+.ui-tabs .ui-tabs-nav { height:28px; margin:-3px -5px; padding: .2em .2em 9px;  border-bottom-color:white;}
+
+.ui-tabs .ui-tabs-nav li { text-align:center;  list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; width:110px; height:24px; }
+.ui-tabs .ui-tabs-nav li a {  width:79px; position:relative; bottom:3px; display:block; float: left;  text-decoration: none; margin-bottom:5px; padding-bottom:5px; text-align:center;  letter-spacing:2px;}
+.ui-tabs .ui-tabs-nav li a { *padding-top:0.7em; }
+
+/************************** redmond.css-76 改变菜单选中时颜色 ****************************/
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {color:#216D6A;text-decoration:none;}
+                             
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { text-align:center; background-color:#1E8F5D; margin-bottom: 0; padding-bottom: 1px; width:110px; height:24px;border-top-color:#10637B; border-left-color:#10637B; border-right-color:#10637B;  }
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-panel{ display: block; border-width: 0; padding-bottom:5px; height:100%; padding:15px 5px;}
+
+.ui-tabs .ui-tabs-hide { display: none !important; }
+
+/******************************** 更改tab中的背景色 ********************************/
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active 
+{   background:url("images/ui-bg_inset-hard_100_f5f8f9_1x100.png") repeat-x scroll 50% 50% #4BAAA6;border:1px solid #79B7E7;
+    color:#4BAAA6;font-weight:bold;  }
+    
+/*去掉左边菜单栏点击时产生的虚线*/
+a{ outline:none;}
+a:visited {color:#000000;font-size:12px;outline:medium none;text-decoration:none;}
+.dtree a.node:hover, .dtree a.nodeSel:hover {color: #333;text-decoration: underline; outline:none;}
+.dtree a.node:visited, .dtree a.nodeSel:visited{ outline:none;} 
+
+
+/******************************** 改变表格中字体颜色 ********************************/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{  border: 1px solid #10637B/*#127940*/; background:url(images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x; font-weight: bold; color: #10637B/*#127940*/; }
+
+/******************************** table-7 '基本信息'的背景显示 ********************************/
+legend
+{   display:block;width:98%; float:left; font-family: Arial, Helvetica, sans-serif;font-size: 15px;letter-spacing: 5px;
+    font-weight: bold;line-height: 1.7; color: #154e4b;background: #D8E6ED url("../images/right_03.gif") repeat-x;border: 1px solid #B1C6CA;
+    border-bottom:none; padding: 2px 15px; margin:0;position:relative;left:-1.3px; top:-2px;
+    *position:relative; *right:9px; *top:-8.5px; *width:97.8%;
+    -moz-border-radius:5px 5px 1px 1px;
+}
+    
+/*************************** table-2 表单标题的格式 *************************/
+fieldset
+{  width:auto;border: 1px solid #B2CDD2;border-top:none;padding:0px 10px 10px 0px;margin:0px 2px 15px 1px; }
+
+/***************** jquery-ui-1.8.5.custom.css-71 鼠标经过菜单时改变背景颜色 ****************/
+.ui-state-hover .ui-state-hover a:hover { color: #fff; text-decoration: none; }
+.ui-state-hover:hover { color: #216D6A; text-decoration: none;  background-color:#fdf5ce;}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #fff; text-decoration: none; }
+
+/***************************  ui.jqgrid.css-6 表头字体设置 ********************************/
+.ui-jqgrid .ui-jqgrid-title { float:left; margin:0.1em 0 0.2em; letter-spacing:3px;}
+
+/************************** 一般领用 下的table 定义类 .table_style1 *************************/
+.table_style{ border:solid 1px #B2CDD2; padding-bottom:5px; margin-bottom:5px;}
+
+/******************************* '读取中... '样式 *******************************/
+.ui-jqgrid .loading { border-width:2px !important; display:none; font-weight:bold;left:45%;margin:5px;padding:6px;position:absolute;
+                      text-align:center;top:45%;width:auto;z-index:101;background:#4BAAA6;  border:solid 1px #67c5c1;color:#FFF;}
+                      
+/**************** 库存管理下 的 入库管理 子菜单显示效果 定义类 .subtitle_style **************/
+.subtitle_style{ padding:0; background:url("../images/right_10.gif") repeat-x;border-bottom:1px solid #B2CDD2;
+                 border-top:1px solid #B2CDD2;}
+.subtitle_style:active{ background:url("../images/right_12.gif") repeat-x; border:1px solid #98B1C0;}
+
+/*********************** ui.jqgrid.css-134 ，grid里面的 查找 ***********************/
+.ui-searchFilter table td {float:left; margin-left:5px;padding:1px; }
+.ui-searchFilter table {margin:0;position:relative;width:385px;}
+.ui-searchFilter table thead td{ width:95%;/*380px;*/}
+.ui-searchFilter .matchText{ margin-left:15px;}
+.ui-searchFilter .rulesText{ margin-right:15px;}
+.ui-searchFilter table{ width:450px;padding-bottom:8px;}
+.ui-searchFilter tbody{ margin-top:5px;}
+
+#fbox_Dictgrid table thead td{width: 285px;}
+#fbox_Dictgrid .matchText{ margin-left:15px;}
+#fbox_Dictgrid .rulesText{ margin-right:15px;}
+#fbox_Dictgrid table{ width:300px;padding-bottom:8px;}
+#fbox_Dictgrid tbody{ margin-top:5px;}
+/************************* 表格右下角的 搜索... 框**********************************/
+#fbox_grid table thead td{width: 318px;}
+#fbox_grid table tfoot span{ width:60px; height:20px;-moz-border-radius:5px 5px 5px 5px; padding-left:5px; margin-right:2px;}
+#fbox_grid table tfoot span span{ width:10px; *width:auto;*padding-right:8px;}
+#fbox_grid table tfoot span span .ui-icon .ui-icon-search{width: 5px; *width: 15px;}
+#fbox_grid table tfoot span span .ui-icon .ui-icon-arrowreturnthick-1-w{width: 5px; *width: 15px;}
+#fbox_grid table tfoot td{ text-align:center;float:right; }
+
+
+
+/**********************************  导航背景图片显示  ***********************************/
+.ui-widget-header {background: #1E8F5D url("../images/right_03.gif") repeat-x scroll 0 0;color:#216D6A;font-weight:bold;}
+                   
+.demo {  background:none repeat scroll 0 0 white;border:1px dashed #B2CDD2;
+         height:370px;margin-right:10px;overflow:auto;padding-left:5px;padding-top:10px;width:200px;}
+
+/******************************* 圆角 *********************************/
+.ui-corner-all {-moz-border-radius:5px 5px 1px 1px;}
+
+.icon_size{ height:28; width:28px; }
+
+/************************** redmond.css-78 ***************************************/
+.ui-state-hover a, .ui-state-hover a:hover { /* color: #1d5987; text-decoration: none;*/}
+
+/************************************* ui-jqgrid.css-11 *************************************/
+ui-jqgrid .ui-jqgrid-hbox {float:left;overflow:hidden;padding-right:2px;}
+
+/********************************** 提示框 *************************************************/
+/*********** 表单中的 帮助、提示图标 class 【每个图标定义一个div，图标放入其中】 *************/
+
+     /* 1 帮助提示图标 路径(../images/help.png) */
+.icon_help{ background:url("../images/help.png") no-repeat; }
+
+     /* 2 隐藏span标签内的帮助提示内容 */
+.icon_help span{ display :none;}
+
+     /* 3 鼠标经过'帮助'图标时，弹出提示框【提示框内的内容写在span标签内：<div><span>帮助内容</span></div>】 */
+.icon_help:hover{ background:url("../images/help_hover.png") no-repeat; }     
+.icon_help:hover span{ font:Arial 13px; color:#555;background-color:#fbfce9;
+                       display:block;width:200px;  padding:5px; border:1px solid #aaa; 
+                     }
+
+    /* error icon 隐藏 */
+.err_hide{ background :url("../images/err.png") no-repeat; visibility:hidden; }
+
+    /* error icon 显示 */
+.err_display{ display:inline; background :url("../images/err.png") no-repeat; width:100px;    
+               border:solid 0px black;margin-left:5px;line-height:19px; }
+
+   /* 鼠标经过'错误'图标时，弹出提示框【提示框内的内容写在span标签内：<div><span>错误提示内容</span></div>】 */
+.err_display span{ display:none;}
+.err_display:hover span{ font:Arial 13px; color:#555; position:relative;left:160px; top:-2px;
+                         display:block;width:90px/*200px*/; padding:5px; border:1px solid #aaa; background-color:#fbfce9;
+                        } 
+/******************************************************************************************/
+
+/******* 原材料里面的 添加表单 border-color:-moz-use-text-color;*****************/
+.ui-jqdialog-content .CaptionTD { border:none;padding:1px;text-align:left;vertical-align:top;white-space:nowrap;width:40%;}
+.ui-jqdialog-content .EditTable {bottom:40px;margin-bottom:0;position:relative;width:100%;top:10px;}
+.ui-jqdialog-content td.EditButton a{ width:30px;}
+.ui-jqdialog-content td.navButton{ border:none; width:100px;}
+.ui-jqdialog-content .DataTD{ border:none;}
+.ui-jqdialog-content td.EditButton{ border:none;}
+
+/*左边菜单字体 ...*/
+.dtree{ font:Arial 12.6px;}
+.dtree .clip{ font:Arial 12.6px; color:#777;}
+.dTreeNode{ margin-top:3px;}
+a:link {font-size:12.6px;text-decoration:none;}
+
+/******** 弹出icon  日期icon 文本框背景色 *********/ 
+.popup{ background:url("../images/click.png") no-repeat; background-position:right center }
+.date_icon{ background:url("../images/date.png") no-repeat; background-position:right center}
+.date_icon:hover{ cursor:pointer;}
+.TextBoxReadOnly{background-color:#DDDDDD; width: 150px; height:18px; border: 1px solid #CCC; 
+                 vertical-align:top;}
+
+/***************** 日期 *******************************/
+.ui-datepicker-calendar { width:200px;}
+#ui-datepicker-div{ width:200px;}
+
+/************* 行政管理 ***********************/
+#mmenu{ margin-bottom:10px;}
+#mmenu #Add_folder{ margin-top:0px;}
+#mmenu #Edit_folder{ margin-top:0px;}
+#mmenu #Del_folder{ margin-top:0px;}
+
+/******************* 行政管理 label **************************/
+label {background-color:#fff;color:#333;display:block;float:left;
+       font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:normal;height:20px;
+       letter-spacing:-1px;line-height:1.1;margin-right:2px;margin-top:3px;margin-left:20px;
+       padding-left:6px;padding-top:11px;width:85px;
+       }
+/************ form 间距**************/
+#House_Usage_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Vehicles_Repair_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Vehicles_Examined_Form table tbody td{ width:350px; float:left;height: 21px;}
+#GM_Seal_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Accident_Record_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Accident_RecordTZ_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Document_Manageseek_Form table tbody td{ width:350px; float:left;height: 21px;}
+#PlantDamage_Record_Form table tbody td{ width:350px; float:left;height: 21px;}
+#CanteenHelp_Record_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Document_Manage_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Document_ManageF_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Other_Cost_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Document_Lendingseek_Form table tbody td{ width:350px; float:left;height: 21px;}
+#Vehicles_Usage_Form table tbody td{ width:350px; float:left;height: 21px;}
+#EmptyPureWater_Manage_Form table tbody td{ width:350px; float:left;height: 21px;}
+#WaterRecipients_Record_Form table tbody td{ width:350px; float:left;height: 21px;}
+#WaterRecipients_Records_Form table tbody td{ width:350px; float:left;height: 21px;}
+#House_Cost_Form table tbody td{ width:350px; float:left;height: 21px;}
+#SEP_Record_Form table tbody td{ width:350px; float:left;height: 21px;}
+#TrafficAccident_Record_Form table tbody td{width:350px; float:left;height: 21px;}
+#TrafficAccident_Recordclaimant_Form table tbody td{width:350px; float:left;height: 21px;}
+#Work_Recipients_Form table tbody td{width:350px; float:left;height: 21px;}
+#Plant_Record_Form table tbody td{width:350px; float:left;height: 21px;}
+#PlantChanged_Record_Form table tbody td{width:350px; float:left;height: 21px;}
+#Bse_CanteenItem_Form table tbody td{width:350px; float:left;height: 21px;}
+#Fax_Record_Form table tbody td{width:350px; float:left;height: 21px;}
+#Telephone_Record_Form table tbody td{width:350px; float:left;height: 21px;}
+#Outreach_Info_Form table tbody td{width:350px; float:left;height: 21px;}
+#Outreach_Coordination_Form table tbody td{width:350px; float:left;height: 21px;}
+#Outreach_Coordination_Form input[type="button"]{ margin-top:25px;}
+#Document_Lending_Form table tbody td{width:350px; float:left;height: 21px;}
+#Document_Lendings_Form table tbody td{width:350px; float:left;height: 21px;}
+#Document_Movement_Form table tbody td{width:350px; float:left;height: 21px;}
+#Document_Manages_Form table tbody td{ width:350px;float:left; height:21px;}
+#Document_LendingF_Form table tbody td{width:350px;float:left; height:21px;}
+#Document_IssueRecord_Form table tbody td{width:350px;float:left; height:21px;}
+#BussinessReception_Record_Form table tbody td{width:350px;float:left; height:21px;}
+#MealReception_Record_Form table tbody td{width:350px;float:left; height:21px;}
+#HotelReception_Record_Form table tbody td{width:350px;float:left; height:21px;}
+
+.select { padding:1px;}

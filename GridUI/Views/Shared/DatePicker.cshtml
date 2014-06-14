@@ -1,0 +1,17 @@
+﻿@{var bdate = "bDate"+Model;}
+@{var edate = "eDate"+Model;}
+@{var btn = "Query"+Model+"()";}
+<label>开始时间：</label>
+<input type="text" id='@bdate' name="@bdate" value="" />
+<label>结束时间：</label>
+<input type="text" id='@edate' name="@edate" value="" />
+<input type="button" id="@btn" value="查询" name="query" onclick='@btn'/>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#@bdate").datepicker({ dateFormat: "yy-mm-dd" });
+        $("#@edate").datepicker({ dateFormat: "yy-mm-dd" });
+    });
+
+</script>

@@ -1,0 +1,1721 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FCF9493-A39B-4294-B5F6-F09E838D8516}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GridUI</RootNamespace>
+    <AssemblyName>GridUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.4330.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Extensions, Version=2.1.3551.36646, Culture=neutral, PublicKeyToken=bebd372c505097f2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\DocumentFormat.OpenXml.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.3.0.20105.1\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.1.0.20105.408\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\Base\CommLog.cs" />
+    <Compile Include="Controllers\Base\FileResult.cs" />
+    <Compile Include="Controllers\Controllers\AreaController.cs" />
+    <Compile Include="Controllers\Controllers\ChartController.cs" />
+    <Compile Include="Controllers\Controllers\DesktopController.cs" />
+    <Compile Include="Controllers\Controllers\DictController.cs" />
+    <Compile Include="Controllers\Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Controllers\HRController.cs" />
+    <Compile Include="Controllers\Controllers\PermissionController.cs" />
+    <Compile Include="Controllers\Controllers\SysSessionController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Attachment\fileuploader.css" />
+    <Content Include="Content\css\green.css" />
+    <Content Include="Content\css\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\css\jquery.autocomplete.css" />
+    <Content Include="Content\css\jquery.multiselect.css" />
+    <Content Include="Content\css\jquery.popup.css" />
+    <Content Include="Content\css\Site.css" />
+    <Content Include="Content\css\table.css" />
+    <Content Include="Content\Dtree\dtree.css" />
+    <Content Include="Content\Dtree\img\base.gif" />
+    <Content Include="Content\Dtree\img\cd.gif" />
+    <Content Include="Content\Dtree\img\empty.gif" />
+    <Content Include="Content\Dtree\img\folder.gif" />
+    <Content Include="Content\Dtree\img\folderopen.gif" />
+    <Content Include="Content\Dtree\img\globe.gif" />
+    <Content Include="Content\Dtree\img\imgfolder.gif" />
+    <Content Include="Content\Dtree\img\join.gif" />
+    <Content Include="Content\Dtree\img\joinbottom.gif" />
+    <Content Include="Content\Dtree\img\line.gif" />
+    <Content Include="Content\Dtree\img\minus.gif" />
+    <Content Include="Content\Dtree\img\minusbottom.gif" />
+    <Content Include="Content\Dtree\img\musicfolder.gif" />
+    <Content Include="Content\Dtree\img\nolines_minus.gif" />
+    <Content Include="Content\Dtree\img\nolines_plus.gif" />
+    <Content Include="Content\Dtree\img\page.gif" />
+    <Content Include="Content\Dtree\img\plus.gif" />
+    <Content Include="Content\Dtree\img\plusbottom.gif" />
+    <Content Include="Content\Dtree\img\question.gif" />
+    <Content Include="Content\Dtree\img\trash.gif" />
+    <Content Include="Content\fckeditor\editor\css\behaviors\disablehandles.htc" />
+    <Content Include="Content\fckeditor\editor\css\behaviors\showtableborders.htc" />
+    <Content Include="Content\fckeditor\editor\css\fck_editorarea.css" />
+    <Content Include="Content\fckeditor\editor\css\fck_internal.css" />
+    <Content Include="Content\fckeditor\editor\css\fck_showtableborders_gecko.css" />
+    <Content Include="Content\fckeditor\editor\css\images\block_address.png" />
+    <Content Include="Content\fckeditor\editor\css\images\block_blockquote.png" />
+    <Content Include="Content\fckeditor\editor\css\images\block_div.png" />
+    <Content Include="Content\fckeditor\editor\css\images\block_h1.png" />
+    <Content Include="Content\fckeditor\editor\css\images\block_h2.png" />
+    <Content Include="Content\fckeditor\editor\css\images\block_h3.png" />
+    <Content Include="Content\fckeditor\editor\css\images\block_h4.png" />
+    <Content Include="Content\fckeditor\editor\css\images\block_h5.png" />
+    <Content Include="Content\fckeditor\editor\css\images\block_h6.png" />
+    <Content Include="Content\fckeditor\editor\css\images\block_p.png" />
+    <Content Include="Content\fckeditor\editor\css\images\block_pre.png" />
+    <Content Include="Content\fckeditor\editor\css\images\fck_anchor.gif" />
+    <Content Include="Content\fckeditor\editor\css\images\fck_flashlogo.gif" />
+    <Content Include="Content\fckeditor\editor\css\images\fck_hiddenfield.gif" />
+    <Content Include="Content\fckeditor\editor\css\images\fck_pagebreak.gif" />
+    <Content Include="Content\fckeditor\editor\css\images\fck_plugin.gif" />
+    <Content Include="Content\fckeditor\editor\dialog\common\fck_dialog_common.css" />
+    <Content Include="Content\fckeditor\editor\dialog\common\fck_dialog_common.js" />
+    <Content Include="Content\fckeditor\editor\dialog\common\images\locked.gif" />
+    <Content Include="Content\fckeditor\editor\dialog\common\images\reset.gif" />
+    <Content Include="Content\fckeditor\editor\dialog\common\images\unlocked.gif" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_about.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_about\logo_fckeditor.gif" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_about\logo_fredck.gif" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_about\sponsors\spellchecker_net.gif" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_anchor.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_button.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_checkbox.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_colorselector.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_div.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_docprops.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_docprops\fck_document_preview.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_flash.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_flash\fck_flash.js" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_flash\fck_flash_preview.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_form.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_hiddenfield.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_image.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_image\fck_image.js" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_image\fck_image_preview.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_link.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_link\fck_link.js" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_listprop.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_paste.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_radiobutton.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_replace.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_scayt.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_scayt\scayt_dialog.css" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_select.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_select\fck_select.js" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_smiley.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_source.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_specialchar.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_spellerpages.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\blank.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\controls.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\controlWindow.js" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\spellchecker.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\spellChecker.js" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\spellerStyle.css" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\wordWindow.js" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_table.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_tablecell.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_template.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_template\images\template1.gif" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_template\images\template2.gif" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_template\images\template3.gif" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_textarea.html" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_textfield.html" />
+    <Content Include="Content\fckeditor\editor\dtd\fck_dtd_test.html" />
+    <Content Include="Content\fckeditor\editor\dtd\fck_xhtml10strict.js" />
+    <Content Include="Content\fckeditor\editor\dtd\fck_xhtml10transitional.js" />
+    <Content Include="Content\fckeditor\editor\fckdebug.html" />
+    <Content Include="Content\fckeditor\editor\fckdialog.html" />
+    <Content Include="Content\fckeditor\editor\fckeditor.html" />
+    <Content Include="Content\fckeditor\editor\fckeditor.original.html" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\browser.css" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\browser.html" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\frmactualfolder.html" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\frmcreatefolder.html" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\frmfolders.html" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\frmresourceslist.html" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\frmresourcetype.html" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\frmupload.html" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\ButtonArrow.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\Folder.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\Folder32.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\FolderOpened.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\FolderOpened32.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\FolderUp.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\ai.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\avi.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\bmp.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\cs.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\default.icon.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\dll.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\doc.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\exe.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\fla.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\gif.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\htm.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\html.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\jpg.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\js.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\mdb.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\mp3.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\pdf.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\png.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\ppt.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\rdp.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\swf.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\swt.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\txt.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\vsd.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\xls.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\xml.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\32\zip.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\ai.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\avi.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\bmp.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\cs.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\default.icon.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\dll.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\doc.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\exe.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\fla.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\gif.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\htm.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\html.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\jpg.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\js.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\mdb.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\mp3.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\pdf.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\png.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\ppt.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\rdp.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\swf.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\swt.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\txt.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\vsd.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\xls.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\xml.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\icons\zip.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\images\spacer.gif" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\js\common.js" />
+    <Content Include="Content\fckeditor\editor\filemanager\browser\default\js\fckxml.js" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\aspx\config.ascx" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\aspx\connector.aspx" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\aspx\upload.aspx" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\asp\basexml.asp" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\asp\class_upload.asp" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\asp\commands.asp" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\asp\config.asp" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\asp\connector.asp" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\asp\io.asp" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\asp\upload.asp" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\asp\util.asp" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\py\htaccess.txt" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\test.html" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\uploadtest.html" />
+    <Content Include="Content\fckeditor\editor\images\anchor.gif" />
+    <Content Include="Content\fckeditor\editor\images\arrow_ltr.gif" />
+    <Content Include="Content\fckeditor\editor\images\arrow_rtl.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\angel_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\angry_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\broken_heart.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\cake.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\confused_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\cry_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\devil_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\embaressed_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\envelope.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\heart.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\kiss.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\lightbulb.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\omg_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\regular_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\sad_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\shades_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\teeth_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\thumbs_down.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\thumbs_up.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\tounge_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\whatchutalkingabout_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\smiley\msn\wink_smile.gif" />
+    <Content Include="Content\fckeditor\editor\images\spacer.gif" />
+    <Content Include="Content\fckeditor\editor\js\fckadobeair.js" />
+    <Content Include="Content\fckeditor\editor\js\fckeditorcode_gecko.js" />
+    <Content Include="Content\fckeditor\editor\js\fckeditorcode_ie.js" />
+    <Content Include="Content\fckeditor\editor\lang\af.js" />
+    <Content Include="Content\fckeditor\editor\lang\ar.js" />
+    <Content Include="Content\fckeditor\editor\lang\bg.js" />
+    <Content Include="Content\fckeditor\editor\lang\bn.js" />
+    <Content Include="Content\fckeditor\editor\lang\bs.js" />
+    <Content Include="Content\fckeditor\editor\lang\ca.js" />
+    <Content Include="Content\fckeditor\editor\lang\cs.js" />
+    <Content Include="Content\fckeditor\editor\lang\da.js" />
+    <Content Include="Content\fckeditor\editor\lang\de.js" />
+    <Content Include="Content\fckeditor\editor\lang\el.js" />
+    <Content Include="Content\fckeditor\editor\lang\en-au.js" />
+    <Content Include="Content\fckeditor\editor\lang\en-ca.js" />
+    <Content Include="Content\fckeditor\editor\lang\en-uk.js" />
+    <Content Include="Content\fckeditor\editor\lang\en.js" />
+    <Content Include="Content\fckeditor\editor\lang\eo.js" />
+    <Content Include="Content\fckeditor\editor\lang\es.js" />
+    <Content Include="Content\fckeditor\editor\lang\et.js" />
+    <Content Include="Content\fckeditor\editor\lang\eu.js" />
+    <Content Include="Content\fckeditor\editor\lang\fa.js" />
+    <Content Include="Content\fckeditor\editor\lang\fi.js" />
+    <Content Include="Content\fckeditor\editor\lang\fo.js" />
+    <Content Include="Content\fckeditor\editor\lang\fr-ca.js" />
+    <Content Include="Content\fckeditor\editor\lang\fr.js" />
+    <Content Include="Content\fckeditor\editor\lang\gl.js" />
+    <Content Include="Content\fckeditor\editor\lang\gu.js" />
+    <Content Include="Content\fckeditor\editor\lang\he.js" />
+    <Content Include="Content\fckeditor\editor\lang\hi.js" />
+    <Content Include="Content\fckeditor\editor\lang\hr.js" />
+    <Content Include="Content\fckeditor\editor\lang\hu.js" />
+    <Content Include="Content\fckeditor\editor\lang\is.js" />
+    <Content Include="Content\fckeditor\editor\lang\it.js" />
+    <Content Include="Content\fckeditor\editor\lang\ja.js" />
+    <Content Include="Content\fckeditor\editor\lang\km.js" />
+    <Content Include="Content\fckeditor\editor\lang\ko.js" />
+    <Content Include="Content\fckeditor\editor\lang\lt.js" />
+    <Content Include="Content\fckeditor\editor\lang\lv.js" />
+    <Content Include="Content\fckeditor\editor\lang\mn.js" />
+    <Content Include="Content\fckeditor\editor\lang\ms.js" />
+    <Content Include="Content\fckeditor\editor\lang\nb.js" />
+    <Content Include="Content\fckeditor\editor\lang\nl.js" />
+    <Content Include="Content\fckeditor\editor\lang\no.js" />
+    <Content Include="Content\fckeditor\editor\lang\pl.js" />
+    <Content Include="Content\fckeditor\editor\lang\pt-br.js" />
+    <Content Include="Content\fckeditor\editor\lang\pt.js" />
+    <Content Include="Content\fckeditor\editor\lang\ro.js" />
+    <Content Include="Content\fckeditor\editor\lang\ru.js" />
+    <Content Include="Content\fckeditor\editor\lang\sk.js" />
+    <Content Include="Content\fckeditor\editor\lang\sl.js" />
+    <Content Include="Content\fckeditor\editor\lang\sr-latn.js" />
+    <Content Include="Content\fckeditor\editor\lang\sr.js" />
+    <Content Include="Content\fckeditor\editor\lang\sv.js" />
+    <Content Include="Content\fckeditor\editor\lang\th.js" />
+    <Content Include="Content\fckeditor\editor\lang\tr.js" />
+    <Content Include="Content\fckeditor\editor\lang\uk.js" />
+    <Content Include="Content\fckeditor\editor\lang\vi.js" />
+    <Content Include="Content\fckeditor\editor\lang\zh-cn.js" />
+    <Content Include="Content\fckeditor\editor\lang\zh.js" />
+    <Content Include="Content\fckeditor\editor\lang\_translationstatus.txt" />
+    <Content Include="Content\fckeditor\editor\plugins\autogrow\fckplugin.js" />
+    <Content Include="Content\fckeditor\editor\plugins\bbcode\fckplugin.js" />
+    <Content Include="Content\fckeditor\editor\plugins\bbcode\_sample\sample.config.js" />
+    <Content Include="Content\fckeditor\editor\plugins\bbcode\_sample\sample.html" />
+    <Content Include="Content\fckeditor\editor\plugins\dragresizetable\fckplugin.js" />
+    <Content Include="Content\fckeditor\editor\plugins\placeholder\fckplugin.js" />
+    <Content Include="Content\fckeditor\editor\plugins\placeholder\fck_placeholder.html" />
+    <Content Include="Content\fckeditor\editor\plugins\placeholder\lang\de.js" />
+    <Content Include="Content\fckeditor\editor\plugins\placeholder\lang\en.js" />
+    <Content Include="Content\fckeditor\editor\plugins\placeholder\lang\es.js" />
+    <Content Include="Content\fckeditor\editor\plugins\placeholder\lang\fr.js" />
+    <Content Include="Content\fckeditor\editor\plugins\placeholder\lang\it.js" />
+    <Content Include="Content\fckeditor\editor\plugins\placeholder\lang\pl.js" />
+    <Content Include="Content\fckeditor\editor\plugins\placeholder\placeholder.gif" />
+    <Content Include="Content\fckeditor\editor\plugins\simplecommands\fckplugin.js" />
+    <Content Include="Content\fckeditor\editor\plugins\tablecommands\fckplugin.js" />
+    <Content Include="Content\fckeditor\editor\skins\default\fck_dialog.css" />
+    <Content Include="Content\fckeditor\editor\skins\default\fck_dialog_ie6.js" />
+    <Content Include="Content\fckeditor\editor\skins\default\fck_editor.css" />
+    <Content Include="Content\fckeditor\editor\skins\default\fck_strip.gif" />
+    <Content Include="Content\fckeditor\editor\skins\default\images\dialog.sides.gif" />
+    <Content Include="Content\fckeditor\editor\skins\default\images\dialog.sides.png" />
+    <Content Include="Content\fckeditor\editor\skins\default\images\dialog.sides.rtl.png" />
+    <Content Include="Content\fckeditor\editor\skins\default\images\sprites.gif" />
+    <Content Include="Content\fckeditor\editor\skins\default\images\sprites.png" />
+    <Content Include="Content\fckeditor\editor\skins\default\images\toolbar.arrowright.gif" />
+    <Content Include="Content\fckeditor\editor\skins\default\images\toolbar.buttonarrow.gif" />
+    <Content Include="Content\fckeditor\editor\skins\default\images\toolbar.collapse.gif" />
+    <Content Include="Content\fckeditor\editor\skins\default\images\toolbar.end.gif" />
+    <Content Include="Content\fckeditor\editor\skins\default\images\toolbar.expand.gif" />
+    <Content Include="Content\fckeditor\editor\skins\default\images\toolbar.separator.gif" />
+    <Content Include="Content\fckeditor\editor\skins\default\images\toolbar.start.gif" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\fck_dialog.css" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\fck_dialog_ie6.js" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\fck_editor.css" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\fck_strip.gif" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\dialog.sides.gif" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\dialog.sides.png" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\dialog.sides.rtl.png" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\sprites.gif" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\sprites.png" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\toolbar.arrowright.gif" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\toolbar.bg.gif" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\toolbar.buttonarrow.gif" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\toolbar.collapse.gif" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\toolbar.end.gif" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\toolbar.expand.gif" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\toolbar.separator.gif" />
+    <Content Include="Content\fckeditor\editor\skins\office2003\images\toolbar.start.gif" />
+    <Content Include="Content\fckeditor\editor\skins\silver\fck_dialog.css" />
+    <Content Include="Content\fckeditor\editor\skins\silver\fck_dialog_ie6.js" />
+    <Content Include="Content\fckeditor\editor\skins\silver\fck_editor.css" />
+    <Content Include="Content\fckeditor\editor\skins\silver\fck_strip.gif" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\dialog.sides.gif" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\dialog.sides.png" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\dialog.sides.rtl.png" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\sprites.gif" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\sprites.png" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\toolbar.arrowright.gif" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\toolbar.buttonarrow.gif" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\toolbar.buttonbg.gif" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\toolbar.collapse.gif" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\toolbar.end.gif" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\toolbar.expand.gif" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\toolbar.separator.gif" />
+    <Content Include="Content\fckeditor\editor\skins\silver\images\toolbar.start.gif" />
+    <Content Include="Content\fckeditor\editor\skins\_fckviewstrips.html" />
+    <Content Include="Content\fckeditor\editor\wsc\ciframe.html" />
+    <Content Include="Content\fckeditor\editor\wsc\tmpFrameset.html" />
+    <Content Include="Content\fckeditor\editor\wsc\w.html" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckcontextmenu.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckdataprocessor.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckdocumentfragment_gecko.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckdocumentfragment_ie.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckdomrange.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckdomrangeiterator.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckdomrange_gecko.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckdomrange_ie.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckeditingarea.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckelementpath.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckenterkey.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckevents.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckhtmliterator.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckicon.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckiecleanup.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckimagepreloader.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckkeystrokehandler.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckmenublock.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckmenublockpanel.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckmenuitem.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckpanel.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckplugin.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckspecialcombo.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckstyle.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fcktoolbar.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fcktoolbarbreak_gecko.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fcktoolbarbreak_ie.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fcktoolbarbutton.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fcktoolbarbuttonui.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fcktoolbarfontformatcombo.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fcktoolbarfontscombo.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fcktoolbarfontsizecombo.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fcktoolbarpanelbutton.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fcktoolbarspecialcombo.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fcktoolbarstylecombo.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckw3crange.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckxml.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckxml_gecko.js" />
+    <Content Include="Content\fckeditor\editor\_source\classes\fckxml_ie.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fckblockquotecommand.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fckcorestylecommand.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fckfitwindow.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fckindentcommands.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fckjustifycommands.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fcklistcommands.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fcknamedcommand.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fckpasteplaintextcommand.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fckpastewordcommand.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fckremoveformatcommand.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fckshowblocks.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fckspellcheckcommand_gecko.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fckspellcheckcommand_ie.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fckstylecommand.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fcktablecommand.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fcktextcolorcommand.js" />
+    <Content Include="Content\fckeditor\editor\_source\commandclasses\fck_othercommands.js" />
+    <Content Include="Content\fckeditor\editor\_source\fckconstants.js" />
+    <Content Include="Content\fckeditor\editor\_source\fckeditorapi.js" />
+    <Content Include="Content\fckeditor\editor\_source\fckjscoreextensions.js" />
+    <Content Include="Content\fckeditor\editor\_source\fckscriptloader.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fck.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckbrowserinfo.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckcodeformatter.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckcommands.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckconfig.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckdebug.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckdebug_empty.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckdialog.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckdocumentprocessor.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckdomtools.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fcklanguagemanager.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fcklisthandler.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fcklistslib.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckplugins.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckregexlib.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckscayt.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckselection.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckselection_gecko.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckselection_ie.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckstyles.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fcktablehandler.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fcktablehandler_gecko.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fcktablehandler_ie.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fcktoolbaritems.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fcktoolbarset.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fcktools.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fcktools_gecko.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fcktools_ie.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckundo.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckurlparams.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckxhtml.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckxhtmlentities.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckxhtml_gecko.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fckxhtml_ie.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fck_contextmenu.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fck_gecko.js" />
+    <Content Include="Content\fckeditor\editor\_source\internals\fck_ie.js" />
+    <Content Include="Content\fckeditor\fckconfig.js" />
+    <Content Include="Content\fckeditor\fckeditor.asp" />
+    <Content Include="Content\fckeditor\fckeditor.js" />
+    <Content Include="Content\fckeditor\fckpackager.xml" />
+    <Content Include="Content\fckeditor\fckstyles.xml" />
+    <Content Include="Content\fckeditor\fcktemplates.xml" />
+    <Content Include="Content\fckeditor\license.txt" />
+    <Content Include="Content\fckeditor\_documentation.html" />
+    <Content Include="Content\fckeditor\_samples\adobeair\application.xml" />
+    <Content Include="Content\fckeditor\_samples\adobeair\icons\128.png" />
+    <Content Include="Content\fckeditor\_samples\adobeair\icons\16.png" />
+    <Content Include="Content\fckeditor\_samples\adobeair\icons\32.png" />
+    <Content Include="Content\fckeditor\_samples\adobeair\icons\48.png" />
+    <Content Include="Content\fckeditor\_samples\adobeair\sample01.html" />
+    <Content Include="Content\fckeditor\_samples\asp\sample01.asp" />
+    <Content Include="Content\fckeditor\_samples\asp\sample02.asp" />
+    <Content Include="Content\fckeditor\_samples\asp\sample03.asp" />
+    <Content Include="Content\fckeditor\_samples\asp\sample04.asp" />
+    <Content Include="Content\fckeditor\_samples\asp\sampleposteddata.asp" />
+    <Content Include="Content\fckeditor\_samples\default.html" />
+    <Content Include="Content\fckeditor\_samples\html\assets\sample06.config.js" />
+    <Content Include="Content\fckeditor\_samples\html\assets\sample11_frame.html" />
+    <Content Include="Content\fckeditor\_samples\html\assets\sample14.config.js" />
+    <Content Include="Content\fckeditor\_samples\html\assets\sample14.styles.css" />
+    <Content Include="Content\fckeditor\_samples\html\assets\sample15.config.js" />
+    <Content Include="Content\fckeditor\_samples\html\assets\sample16.config.js" />
+    <Content Include="Content\fckeditor\_samples\html\assets\sample16.swf" />
+    <Content Include="Content\fckeditor\_samples\html\assets\swfobject.js" />
+    <Content Include="Content\fckeditor\_samples\html\sample01.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample02.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample03.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample04.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample05.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample06.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample07.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample08.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample09.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample10.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample11.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample12.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample13.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample14.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample15.html" />
+    <Content Include="Content\fckeditor\_samples\html\sample16.html" />
+    <Content Include="Content\fckeditor\_samples\sample.css" />
+    <Content Include="Content\fckeditor\_samples\sampleslist.html" />
+    <Content Include="Content\fckeditor\_samples\_plugins\findreplace\fckplugin.js" />
+    <Content Include="Content\fckeditor\_samples\_plugins\findreplace\find.gif" />
+    <Content Include="Content\fckeditor\_samples\_plugins\findreplace\find.html" />
+    <Content Include="Content\fckeditor\_samples\_plugins\findreplace\lang\en.js" />
+    <Content Include="Content\fckeditor\_samples\_plugins\findreplace\lang\fr.js" />
+    <Content Include="Content\fckeditor\_samples\_plugins\findreplace\lang\it.js" />
+    <Content Include="Content\fckeditor\_samples\_plugins\findreplace\replace.gif" />
+    <Content Include="Content\fckeditor\_samples\_plugins\findreplace\replace.html" />
+    <Content Include="Content\fckeditor\_samples\_plugins\samples\fckplugin.js" />
+    <Content Include="Content\fckeditor\_upgrade.html" />
+    <Content Include="Content\fckeditor\_whatsnew.html" />
+    <Content Include="Content\fckeditor\_whatsnew_history.html" />
+    <Content Include="Content\greenimg\btn.png" />
+    <Content Include="Content\greenimg\btn_over.png" />
+    <Content Include="Content\greenimg\main_01.png" />
+    <Content Include="Content\greenimg\main_03.gif" />
+    <Content Include="Content\greenimg\main_05.gif" />
+    <Content Include="Content\greenimg\main_06.png" />
+    <Content Include="Content\greenimg\main_07.gif" />
+    <Content Include="Content\greenimg\main_09.gif" />
+    <Content Include="Content\greenimg\main_11.gif" />
+    <Content Include="Content\greenimg\main_13.gif" />
+    <Content Include="Content\greenimg\main_15.gif" />
+    <Content Include="Content\greenimg\main_17.png" />
+    <Content Include="Content\greenimg\main_25.gif" />
+    <Content Include="Content\greenimg\main_36.gif" />
+    <Content Include="Content\greenimg\right_031.gif" />
+    <Content Include="Content\greenimg\toolbar.png" />
+    <Content Include="Content\images\1.gif" />
+    <Content Include="Content\images\10.gif" />
+    <Content Include="Content\images\10_1.gif" />
+    <Content Include="Content\images\11.gif" />
+    <Content Include="Content\images\16.png" />
+    <Content Include="Content\images\16m.png" />
+    <Content Include="Content\images\16s.png" />
+    <Content Include="Content\images\16t.png" />
+    <Content Include="Content\images\1_1.gif" />
+    <Content Include="Content\images\2.gif" />
+    <Content Include="Content\images\22.gif" />
+    <Content Include="Content\images\2_1.gif" />
+    <Content Include="Content\images\3.gif" />
+    <Content Include="Content\images\33.gif" />
+    <Content Include="Content\images\3_1.gif" />
+    <Content Include="Content\images\4.gif" />
+    <Content Include="Content\images\4_1.gif" />
+    <Content Include="Content\images\5.gif" />
+    <Content Include="Content\images\5_1.gif" />
+    <Content Include="Content\images\6.gif" />
+    <Content Include="Content\images\6_1.gif" />
+    <Content Include="Content\images\7.gif" />
+    <Content Include="Content\images\7_1.gif" />
+    <Content Include="Content\images\8.gif" />
+    <Content Include="Content\images\8_1.gif" />
+    <Content Include="Content\images\9.gif" />
+    <Content Include="Content\images\9_1.gif" />
+    <Content Include="Content\images\add.png" />
+    <Content Include="Content\images\add1.png" />
+    <Content Include="Content\images\arrow-down.gif" />
+    <Content Include="Content\images\arrow-up.gif" />
+    <Content Include="Content\images\back.gif" />
+    <Content Include="Content\images\back.png" />
+    <Content Include="Content\images\bg.gif" />
+    <Content Include="Content\images\btn.png" />
+    <Content Include="Content\images\btn_over.png" />
+    <Content Include="Content\images\click.png" />
+    <Content Include="Content\images\Company.gif" />
+    <Content Include="Content\images\date.png" />
+    <Content Include="Content\images\default.png" />
+    <Content Include="Content\images\del.gif" />
+    <Content Include="Content\images\dl.gif" />
+    <Content Include="Content\images\down.png" />
+    <Content Include="Content\images\e.gif" />
+    <Content Include="Content\images\edit1.png" />
+    <Content Include="Content\images\edt.gif" />
+    <Content Include="Content\images\err.png" />
+    <Content Include="Content\images\error.png" />
+    <Content Include="Content\images\export.png" />
+    <Content Include="Content\images\first.gif" />
+    <Content Include="Content\images\go.gif" />
+    <Content Include="Content\images\help.png" />
+    <Content Include="Content\images\import.gif" />
+    <Content Include="Content\images\last.gif" />
+    <Content Include="Content\images\left_1.gif" />
+    <Content Include="Content\images\left_2.gif" />
+    <Content Include="Content\images\left_2a.gif" />
+    <Content Include="Content\images\left_3.gif" />
+    <Content Include="Content\images\left_4.gif" />
+    <Content Include="Content\images\left_4a.gif" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\login1 - 副本.jpg" />
+    <Content Include="Content\images\login1.jpg" />
+    <Content Include="Content\images\login111.jpg" />
+    <Content Include="Content\images\login_03.gif" />
+    <Content Include="Content\images\login_06.gif" />
+    <Content Include="Content\images\login_09.gif" />
+    <Content Include="Content\images\m1.png" />
+    <Content Include="Content\images\m2.png" />
+    <Content Include="Content\images\main_01.gif" />
+    <Content Include="Content\images\main_03.gif" />
+    <Content Include="Content\images\main_05.gif" />
+    <Content Include="Content\images\main_06.gif" />
+    <Content Include="Content\images\main_07.gif" />
+    <Content Include="Content\images\main_09.gif" />
+    <Content Include="Content\images\main_11.gif" />
+    <Content Include="Content\images\main_13.gif" />
+    <Content Include="Content\images\main_15.gif" />
+    <Content Include="Content\images\main_15a.gif" />
+    <Content Include="Content\images\main_17.gif" />
+    <Content Include="Content\images\main_18.gif" />
+    <Content Include="Content\images\main_21.gif" />
+    <Content Include="Content\images\main_25.gif" />
+    <Content Include="Content\images\main_27.gif" />
+    <Content Include="Content\images\main_29.gif" />
+    <Content Include="Content\images\main_30.gif" />
+    <Content Include="Content\images\main_30_1.gif" />
+    <Content Include="Content\images\main_32.gif" />
+    <Content Include="Content\images\main_36.gif" />
+    <Content Include="Content\images\main_37.gif" />
+    <Content Include="Content\images\main_38.gif" />
+    <Content Include="Content\images\main_40.gif" />
+    <Content Include="Content\images\main_401.gif" />
+    <Content Include="Content\images\main_43.gif" />
+    <Content Include="Content\images\main_461.gif" />
+    <Content Include="Content\images\main_481.gif" />
+    <Content Include="Content\images\main_501.gif" />
+    <Content Include="Content\images\main_51.gif" />
+    <Content Include="Content\images\main_52.gif" />
+    <Content Include="Content\images\main_521.gif" />
+    <Content Include="Content\images\message.png" />
+    <Content Include="Content\images\mini_icons_046.gif" />
+    <Content Include="Content\images\next.gif" />
+    <Content Include="Content\images\operate .png" />
+    <Content Include="Content\images\p.png" />
+    <Content Include="Content\images\pop.png" />
+    <Content Include="Content\images\qx.gif" />
+    <Content Include="Content\images\right.gif" />
+    <Content Include="Content\images\right_03.gif" />
+    <Content Include="Content\images\right_031.gif" />
+    <Content Include="Content\images\right_06.gif" />
+    <Content Include="Content\images\right_061.gif" />
+    <Content Include="Content\images\right_09.gif" />
+    <Content Include="Content\images\right_10.gif" />
+    <Content Include="Content\images\right_12.gif" />
+    <Content Include="Content\images\search.png" />
+    <Content Include="Content\images\syb.gif" />
+    <Content Include="Content\images\tab_03.gif" />
+    <Content Include="Content\images\tab_05.gif" />
+    <Content Include="Content\images\tab_07.gif" />
+    <Content Include="Content\images\tab_12.gif" />
+    <Content Include="Content\images\tab_15.gif" />
+    <Content Include="Content\images\tab_18.gif" />
+    <Content Include="Content\images\tab_19.gif" />
+    <Content Include="Content\images\tab_20.gif" />
+    <Content Include="Content\images\tab_bg.gif" />
+    <Content Include="Content\images\tb.gif" />
+    <Content Include="Content\images\toolbar.png" />
+    <Content Include="Content\images\toolbar_view.png" />
+    <Content Include="Content\images\top1.png" />
+    <Content Include="Content\images\top10.png" />
+    <Content Include="Content\images\top100.png" />
+    <Content Include="Content\images\top101.png" />
+    <Content Include="Content\images\top102.png" />
+    <Content Include="Content\images\top103.png" />
+    <Content Include="Content\images\top104.png" />
+    <Content Include="Content\images\top105.png" />
+    <Content Include="Content\images\top106.png" />
+    <Content Include="Content\images\top107.png" />
+    <Content Include="Content\images\top108.png" />
+    <Content Include="Content\images\top109.png" />
+    <Content Include="Content\images\top11.png" />
+    <Content Include="Content\images\top110.png" />
+    <Content Include="Content\images\top111.png" />
+    <Content Include="Content\images\top112.png" />
+    <Content Include="Content\images\top113.png" />
+    <Content Include="Content\images\top114.png" />
+    <Content Include="Content\images\top115.png" />
+    <Content Include="Content\images\top116.png" />
+    <Content Include="Content\images\top117.png" />
+    <Content Include="Content\images\top118.png" />
+    <Content Include="Content\images\top119.png" />
+    <Content Include="Content\images\top12.png" />
+    <Content Include="Content\images\top120.png" />
+    <Content Include="Content\images\top121.png" />
+    <Content Include="Content\images\top122.png" />
+    <Content Include="Content\images\top123.png" />
+    <Content Include="Content\images\top124.png" />
+    <Content Include="Content\images\top125.png" />
+    <Content Include="Content\images\top126.png" />
+    <Content Include="Content\images\top127.png" />
+    <Content Include="Content\images\top128.png" />
+    <Content Include="Content\images\top129.png" />
+    <Content Include="Content\images\top13.png" />
+    <Content Include="Content\images\top130.png" />
+    <Content Include="Content\images\top131.png" />
+    <Content Include="Content\images\top132.png" />
+    <Content Include="Content\images\top133.png" />
+    <Content Include="Content\images\top134.png" />
+    <Content Include="Content\images\top135.png" />
+    <Content Include="Content\images\top136.png" />
+    <Content Include="Content\images\top137.png" />
+    <Content Include="Content\images\top138.png" />
+    <Content Include="Content\images\top139.png" />
+    <Content Include="Content\images\top14.png" />
+    <Content Include="Content\images\top140.png" />
+    <Content Include="Content\images\top141.png" />
+    <Content Include="Content\images\top142.png" />
+    <Content Include="Content\images\top143.png" />
+    <Content Include="Content\images\top144.png" />
+    <Content Include="Content\images\top145.png" />
+    <Content Include="Content\images\top146.png" />
+    <Content Include="Content\images\top147.png" />
+    <Content Include="Content\images\top148.png" />
+    <Content Include="Content\images\top149.png" />
+    <Content Include="Content\images\top15.png" />
+    <Content Include="Content\images\top150.png" />
+    <Content Include="Content\images\top151.png" />
+    <Content Include="Content\images\top152.png" />
+    <Content Include="Content\images\top153.png" />
+    <Content Include="Content\images\top154.png" />
+    <Content Include="Content\images\top155.png" />
+    <Content Include="Content\images\top156.png" />
+    <Content Include="Content\images\top157.png" />
+    <Content Include="Content\images\top158.png" />
+    <Content Include="Content\images\top159.png" />
+    <Content Include="Content\images\top16.png" />
+    <Content Include="Content\images\top160.png" />
+    <Content Include="Content\images\top161.png" />
+    <Content Include="Content\images\top162.png" />
+    <Content Include="Content\images\top163.png" />
+    <Content Include="Content\images\top164.png" />
+    <Content Include="Content\images\top165.png" />
+    <Content Include="Content\images\top166.png" />
+    <Content Include="Content\images\top167.png" />
+    <Content Include="Content\images\top168.png" />
+    <Content Include="Content\images\top169.png" />
+    <Content Include="Content\images\top17.png" />
+    <Content Include="Content\images\top170.png" />
+    <Content Include="Content\images\top171.png" />
+    <Content Include="Content\images\top172.png" />
+    <Content Include="Content\images\top18.png" />
+    <Content Include="Content\images\top19.png" />
+    <Content Include="Content\images\top2.png" />
+    <Content Include="Content\images\top20.png" />
+    <Content Include="Content\images\top21.png" />
+    <Content Include="Content\images\top22.png" />
+    <Content Include="Content\images\top23.png" />
+    <Content Include="Content\images\top24.png" />
+    <Content Include="Content\images\top25.png" />
+    <Content Include="Content\images\top26.png" />
+    <Content Include="Content\images\top27.png" />
+    <Content Include="Content\images\top28.png" />
+    <Content Include="Content\images\top29.png" />
+    <Content Include="Content\images\top3.png" />
+    <Content Include="Content\images\top30.png" />
+    <Content Include="Content\images\top31.png" />
+    <Content Include="Content\images\top32.png" />
+    <Content Include="Content\images\top33.png" />
+    <Content Include="Content\images\top34.png" />
+    <Content Include="Content\images\top35.png" />
+    <Content Include="Content\images\top36.png" />
+    <Content Include="Content\images\top37.png" />
+    <Content Include="Content\images\top38.png" />
+    <Content Include="Content\images\top39.png" />
+    <Content Include="Content\images\top4.png" />
+    <Content Include="Content\images\top40.png" />
+    <Content Include="Content\images\top41.png" />
+    <Content Include="Content\images\top43.png" />
+    <Content Include="Content\images\top44.png" />
+    <Content Include="Content\images\top45.png" />
+    <Content Include="Content\images\top46.png" />
+    <Content Include="Content\images\top47.png" />
+    <Content Include="Content\images\top48.png" />
+    <Content Include="Content\images\top49.png" />
+    <Content Include="Content\images\top5.png" />
+    <Content Include="Content\images\top50.png" />
+    <Content Include="Content\images\top51.png" />
+    <Content Include="Content\images\top52.png" />
+    <Content Include="Content\images\top53.png" />
+    <Content Include="Content\images\top54.png" />
+    <Content Include="Content\images\top55.png" />
+    <Content Include="Content\images\top56.png" />
+    <Content Include="Content\images\top57.png" />
+    <Content Include="Content\images\top58.png" />
+    <Content Include="Content\images\top59.png" />
+    <Content Include="Content\images\top6.png" />
+    <Content Include="Content\images\top60.png" />
+    <Content Include="Content\images\top61.png" />
+    <Content Include="Content\images\top62.png" />
+    <Content Include="Content\images\top63.png" />
+    <Content Include="Content\images\top64.png" />
+    <Content Include="Content\images\top65.png" />
+    <Content Include="Content\images\top66.png" />
+    <Content Include="Content\images\top67.png" />
+    <Content Include="Content\images\top68.png" />
+    <Content Include="Content\images\top69.png" />
+    <Content Include="Content\images\top7.gif" />
+    <Content Include="Content\images\top70.png" />
+    <Content Include="Content\images\top71.png" />
+    <Content Include="Content\images\top72.png" />
+    <Content Include="Content\images\top73.png" />
+    <Content Include="Content\images\top74.png" />
+    <Content Include="Content\images\top75.png" />
+    <Content Include="Content\images\top76.png" />
+    <Content Include="Content\images\top77.png" />
+    <Content Include="Content\images\top78.png" />
+    <Content Include="Content\images\top79.png" />
+    <Content Include="Content\images\top8.png" />
+    <Content Include="Content\images\top80.png" />
+    <Content Include="Content\images\top81.png" />
+    <Content Include="Content\images\top82.png" />
+    <Content Include="Content\images\top83.png" />
+    <Content Include="Content\images\top84.png" />
+    <Content Include="Content\images\top85.png" />
+    <Content Include="Content\images\top86.png" />
+    <Content Include="Content\images\top87.png" />
+    <Content Include="Content\images\top88.png" />
+    <Content Include="Content\images\top89.png" />
+    <Content Include="Content\images\top9.png" />
+    <Content Include="Content\images\top90.png" />
+    <Content Include="Content\images\top91.png" />
+    <Content Include="Content\images\top92.png" />
+    <Content Include="Content\images\top93.png" />
+    <Content Include="Content\images\top94.png" />
+    <Content Include="Content\images\top95.png" />
+    <Content Include="Content\images\top96.png" />
+    <Content Include="Content\images\top97.png" />
+    <Content Include="Content\images\top98.png" />
+    <Content Include="Content\images\top99.png" />
+    <Content Include="Content\images\top_1.gif" />
+    <Content Include="Content\images\top_10.gif" />
+    <Content Include="Content\images\top_11.gif" />
+    <Content Include="Content\images\top_12.gif" />
+    <Content Include="Content\images\top_13.gif" />
+    <Content Include="Content\images\top_14.gif" />
+    <Content Include="Content\images\top_15.gif" />
+    <Content Include="Content\images\top_16.gif" />
+    <Content Include="Content\images\top_17.gif" />
+    <Content Include="Content\images\top_18.gif" />
+    <Content Include="Content\images\top_2.gif" />
+    <Content Include="Content\images\top_3.gif" />
+    <Content Include="Content\images\top_4.gif" />
+    <Content Include="Content\images\top_5.gif" />
+    <Content Include="Content\images\top_6.gif" />
+    <Content Include="Content\images\top_7.gif" />
+    <Content Include="Content\images\top_8.gif" />
+    <Content Include="Content\images\top_9.gif" />
+    <Content Include="Content\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\images\up.png" />
+    <Content Include="Content\images\view_detailed.png" />
+    <Content Include="Content\images\view_refresh.png" />
+    <Content Include="Content\images\xyb.gif" />
+    <Content Include="Content\jqGridCss\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\jqGridCss\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\jqGridCss\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\jqGridCss\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\jqGridCss\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\jqGridCss\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\jqGridCss\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\jqGridCss\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\jqGridCss\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\jqGridCss\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\jqGridCss\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\jqGridCss\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\jqGridCss\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\jqGridCss\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\jqGridCss\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\jqGridCss\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\jqGridCss\redmond\jquery-ui-1.7.1.custom.css" />
+    <Content Include="Content\jqGridCss\ui.jqgrid.css" />
+    <Content Include="Content\JsTreeThemes\apple\bg.jpg" />
+    <Content Include="Content\JsTreeThemes\apple\d.png" />
+    <Content Include="Content\JsTreeThemes\apple\dot_for_ie.gif" />
+    <Content Include="Content\JsTreeThemes\apple\style.css" />
+    <Content Include="Content\JsTreeThemes\apple\throbber.gif" />
+    <Content Include="Content\JsTreeThemes\classic\d.png" />
+    <Content Include="Content\JsTreeThemes\classic\dot_for_ie.gif" />
+    <Content Include="Content\JsTreeThemes\classic\style.css" />
+    <Content Include="Content\JsTreeThemes\classic\throbber.gif" />
+    <Content Include="Content\JsTreeThemes\default-rtl\d.gif" />
+    <Content Include="Content\JsTreeThemes\default-rtl\d.png" />
+    <Content Include="Content\JsTreeThemes\default-rtl\dots.gif" />
+    <Content Include="Content\JsTreeThemes\default-rtl\style.css" />
+    <Content Include="Content\JsTreeThemes\default-rtl\throbber.gif" />
+    <Content Include="Content\JsTreeThemes\default\d.gif" />
+    <Content Include="Content\JsTreeThemes\default\d.png" />
+    <Content Include="Content\JsTreeThemes\default\style.css" />
+    <Content Include="Content\JsTreeThemes\default\throbber.gif" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\ui-lightness\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\ui-lightness\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\ui-lightness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\ui-lightness\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\ui-lightness\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\ui-lightness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\ui-lightness\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\ui-lightness\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\ui-lightness\jquery-ui-1.8.5.custom.css" />
+    <Content Include="Content\ui-lightness\redmond.css" />
+    <Content Include="Content\ui-lightness\ui-darkness.css" />
+    <Content Include="Content\uploadfiy\cancel.png" />
+    <Content Include="Content\uploadfiy\uploader.swf" />
+    <Content Include="Content\uploadfiy\uploadify.swf" />
+    <Content Include="Dll\DocumentFormat.OpenXml.dll" />
+    <Content Include="Dll\DocumentFormat.OpenXml.Extensions.dll" />
+    <Content Include="Dll\log4net.dll" />
+    <Content Include="Dll\Newtonsoft.Json.dll" />
+    <Content Include="Dll\QX.HtmlHelperLib.dll" />
+    <Content Include="Dll\System.Linq.Dynamic.dll" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.cfm" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php" />
+    <Content Include="Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.pl" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\cf5_connector.cfm" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\cf5_upload.cfm" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\cf_basexml.cfm" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\cf_commands.cfm" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\cf_connector.cfm" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\cf_io.cfm" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\cf_upload.cfm" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\cf_util.cfm" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\config.cfm" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\connector.cfm" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\image.cfc" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\ImageObject.cfc" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\cfm\upload.cfm" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\lasso\config.lasso" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\lasso\connector.lasso" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\lasso\upload.lasso" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\perl\basexml.pl" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\perl\commands.pl" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\perl\config.pl" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\perl\connector.cgi" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\perl\io.pl" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\perl\upload.cgi" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\perl\upload_fck.pl" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\perl\util.pl" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\php\basexml.php" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\php\commands.php" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\php\config.php" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\php\connector.php" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\php\io.php" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\php\phpcompat.php" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\php\upload.php" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\php\util.php" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\py\config.py" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\py\connector.py" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\py\fckcommands.py" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\py\fckconnector.py" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\py\fckoutput.py" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\py\fckutil.py" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\py\upload.py" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\py\wsgi.py" />
+    <Content Include="Content\fckeditor\editor\filemanager\connectors\py\zope.py" />
+    <Content Include="Content\fckeditor\fckeditor.afp" />
+    <Content Include="Content\fckeditor\fckeditor.cfc" />
+    <Content Include="Content\fckeditor\fckeditor.cfm" />
+    <Content Include="Content\fckeditor\fckeditor.lasso" />
+    <Content Include="Content\fckeditor\fckeditor.php" />
+    <Content Include="Content\fckeditor\fckeditor.pl" />
+    <Content Include="Content\fckeditor\fckeditor.py" />
+    <Content Include="Content\fckeditor\fckeditor_php4.php" />
+    <Content Include="Content\fckeditor\fckeditor_php5.php" />
+    <Content Include="Content\fckeditor\fckutils.cfm" />
+    <Content Include="Content\fckeditor\_samples\adobeair\package.bat" />
+    <Content Include="Content\fckeditor\_samples\adobeair\run.bat" />
+    <Content Include="Content\fckeditor\_samples\adobeair\sample01_cert.pfx" />
+    <Content Include="Content\fckeditor\_samples\afp\fck.afpa" />
+    <Content Include="Content\fckeditor\_samples\afp\fck.afpa.code" />
+    <Content Include="Content\fckeditor\_samples\afp\sample01.afp" />
+    <Content Include="Content\fckeditor\_samples\afp\sample02.afp" />
+    <Content Include="Content\fckeditor\_samples\afp\sample03.afp" />
+    <Content Include="Content\fckeditor\_samples\afp\sample04.afp" />
+    <Content Include="Content\fckeditor\_samples\afp\sampleposteddata.afp" />
+    <Content Include="Content\fckeditor\_samples\cfm\sample01.cfm" />
+    <Content Include="Content\fckeditor\_samples\cfm\sample01_mx.cfm" />
+    <Content Include="Content\fckeditor\_samples\cfm\sample02.cfm" />
+    <Content Include="Content\fckeditor\_samples\cfm\sample02_mx.cfm" />
+    <Content Include="Content\fckeditor\_samples\cfm\sample03.cfm" />
+    <Content Include="Content\fckeditor\_samples\cfm\sample03_mx.cfm" />
+    <Content Include="Content\fckeditor\_samples\cfm\sample04.cfm" />
+    <Content Include="Content\fckeditor\_samples\cfm\sample04_mx.cfm" />
+    <Content Include="Content\fckeditor\_samples\cfm\sampleposteddata.cfm" />
+    <Content Include="Content\fckeditor\_samples\html\assets\sample16.fla" />
+    <Content Include="Content\fckeditor\_samples\lasso\sample01.lasso" />
+    <Content Include="Content\fckeditor\_samples\lasso\sample02.lasso" />
+    <Content Include="Content\fckeditor\_samples\lasso\sample03.lasso" />
+    <Content Include="Content\fckeditor\_samples\lasso\sample04.lasso" />
+    <Content Include="Content\fckeditor\_samples\lasso\sampleposteddata.lasso" />
+    <Content Include="Content\fckeditor\_samples\perl\sample01.cgi" />
+    <Content Include="Content\fckeditor\_samples\perl\sample02.cgi" />
+    <Content Include="Content\fckeditor\_samples\perl\sample03.cgi" />
+    <Content Include="Content\fckeditor\_samples\perl\sample04.cgi" />
+    <Content Include="Content\fckeditor\_samples\perl\sampleposteddata.cgi" />
+    <Content Include="Content\fckeditor\_samples\php\sample01.php" />
+    <Content Include="Content\fckeditor\_samples\php\sample02.php" />
+    <Content Include="Content\fckeditor\_samples\php\sample03.php" />
+    <Content Include="Content\fckeditor\_samples\php\sample04.php" />
+    <Content Include="Content\fckeditor\_samples\php\sampleposteddata.php" />
+    <Content Include="Content\fckeditor\_samples\py\sample01.py" />
+    <Content Include="Content\fckeditor\_samples\py\sampleposteddata.py" />
+    <Content Include="RouteConfiguration.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\Module\Bse\BseOperation.js" />
+    <Content Include="Scripts\Module\Dict\DictHandler.js" />
+    <Content Include="Scripts\Module\Doc\DocOperation.js" />
+    <Content Include="Scripts\Module\Doc\EquOperation.js" />
+    <Content Include="Scripts\Module\Doc\Index.js" />
+    <Content Include="Scripts\Extends\EXAPO.js" />
+    <Content Include="Scripts\Extends\ExContract.js" />
+    <Content Include="Scripts\Extends\exGmSeal.js" />
+    <Content Include="Scripts\Extends\ExMPMR.js" />
+    <Content Include="Scripts\Extends\ExMPPP.js" />
+    <Content Include="Scripts\Extends\ExPreContract.js" />
+    <Content Include="Scripts\Extends\ExtendsBack.js" />
+    <Content Include="Scripts\Extends\ExtendsBookBack.js" />
+    <Content Include="Scripts\Extends\ExtendsFax_Record.js" />
+    <Content Include="Scripts\Extends\ExtendsFILEBake.js" />
+    <Content Include="Scripts\Extends\ExtendsLookOrderForm.js" />
+    <Content Include="Scripts\Extends\ExtendsNowDate.js" />
+    <Content Include="Scripts\Extends\ExtendsNowTime.js" />
+    <Content Include="Scripts\Extends\ExtendsPlantChanged_Record.js" />
+    <Content Include="Scripts\Extends\ExtendsPlantDamage_Record.js" />
+    <Content Include="Scripts\Extends\ExtendsPlant_Record.js" />
+    <Content Include="Scripts\Extends\ExtendsVehicle.js" />
+    <Content Include="Scripts\Extends\ExtendsWaterRecipients.js" />
+    <Content Include="Scripts\Extends\Record.js" />
+    <Content Include="Scripts\Module\Menu\LeftMenu.js" />
+    <Content Include="Scripts\Module\Permission\PermissionHandler.js" />
+    <Content Include="Scripts\Shared\AOP.js" />
+    <Content Include="Scripts\Shared\Bak\Bak.js" />
+    <Content Include="Scripts\Shared\CommCheck.js" />
+    <Content Include="Scripts\Shared\ComOperation.js" />
+    <Content Include="Scripts\Shared\ComRpt.js" />
+    <Content Include="Scripts\Shared\DatePicker\calendar.js" />
+    <Content Include="Scripts\Shared\DatePicker\config.js" />
+    <Content Include="Scripts\Shared\DatePicker\lang\en.js" />
+    <Content Include="Scripts\Shared\DatePicker\lang\zh-cn.js" />
+    <Content Include="Scripts\Shared\DatePicker\lang\zh-tw.js" />
+    <Content Include="Scripts\Shared\DatePicker\My97DatePicker.htm" />
+    <Content Include="Scripts\Shared\DatePicker\skin\datePicker.gif" />
+    <Content Include="Scripts\Shared\DatePicker\skin\default\datepicker.css" />
+    <Content Include="Scripts\Shared\DatePicker\skin\default\img.gif" />
+    <Content Include="Scripts\Shared\DatePicker\skin\WdatePicker.css" />
+    <Content Include="Scripts\Shared\DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Scripts\Shared\DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Scripts\Shared\DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Scripts\Shared\DatePicker\WdatePicker.js" />
+    <Content Include="Scripts\Shared\Dept.js" />
+    <Content Include="Scripts\Shared\Dict.js" />
+    <Content Include="Scripts\Shared\dtree.js" />
+    <Content Include="Scripts\Shared\fileuploader.js" />
+    <Content Include="Scripts\Shared\Global.js" />
+    <Content Include="Scripts\Shared\Group.js" />
+    <Content Include="Scripts\Shared\jqGridJs\i18n\grid.locale-cn.js" />
+    <Content Include="Scripts\Shared\jqGridJs\i18n\grid.locale-en.js" />
+    <Content Include="Scripts\Shared\jquery-1.0.formtojson.js" />
+    <None Include="Scripts\Shared\jquery-1.4.1.min-vsdoc.js" />
+    <Content Include="Scripts\Shared\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\Shared\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\Shared\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\Shared\jquery-ui-1.7.2.custom.js" />
+    <Content Include="Scripts\Shared\jquery-ui-1.8.5.custom.min.js" />
+    <Content Include="Scripts\Shared\jquery-ui-timepicker-addon.js" />
+    <Content Include="Scripts\Shared\jquery.addInput.js" />
+    <Content Include="Scripts\Shared\jquery.autocomplete.min.js" />
+    <Content Include="Scripts\Shared\jquery.cookie.js" />
+    <Content Include="Scripts\Shared\jquery.divbox.js" />
+    <Content Include="Scripts\Shared\jquery.form.js" />
+    <Content Include="Scripts\Shared\jquery.hotkeys.js" />
+    <Content Include="Scripts\Shared\jquery.jqGrid.js" />
+    <Content Include="Scripts\Shared\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\Shared\jquery.json-2.2.js" />
+    <Content Include="Scripts\Shared\jquery.multiselect.min.js" />
+    <Content Include="Scripts\Shared\jquery.popup.js" />
+    <Content Include="Scripts\Shared\jquery.query-2.1.7.js" />
+    <Content Include="Scripts\Shared\jquery.tips.js" />
+    <Content Include="Scripts\Shared\jquery.tools.min.js" />
+    <Content Include="Scripts\Shared\jquery.upload-1.0.2.min.js" />
+    <None Include="Scripts\Shared\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\Shared\jquery.validate.js" />
+    <None Include="Scripts\Shared\jquery.validate.min-vsdoc.js" />
+    <Content Include="Scripts\Shared\jquery.validate.min.js" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\jquery.easyui.min.js" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\accordion.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\calendar.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\combo.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\combobox.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\datagrid.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\datebox.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\dialog.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\easyui.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\accordion_collapse.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\accordion_expand.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\button_a_bg.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\button_plain_hover.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\button_span_bg.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\calendar_nextmonth.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\calendar_nextyear.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\calendar_prevmonth.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\calendar_prevyear.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\combo_arrow.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\datagrid_header_bg.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\datagrid_row_collapse.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\datagrid_row_expand.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\datagrid_sort_asc.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\datagrid_sort_desc.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\datagrid_title_bg.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\datebox_arrow.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\layout_button_down.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\layout_button_left.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\layout_button_right.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\layout_button_up.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\menu.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\menu_downarrow.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\menu_rightarrow.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\menu_sep.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\menu_split_downarrow.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\messager_error.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\messager_info.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\messager_question.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\messager_warning.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\pagination_first.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\pagination_last.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\pagination_load.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\pagination_loading.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\pagination_next.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\pagination_prev.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\panel_loading.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\panel_title.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\panel_tools.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\panel_tool_collapse.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\panel_tool_expand.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\spinner_arrow_down.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\spinner_arrow_up.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tabs_active.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tabs_close.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tabs_enabled.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tabs_leftarrow.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tabs_rightarrow.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tree_arrows.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tree_checkbox_0.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tree_checkbox_1.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tree_checkbox_2.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tree_dnd_no.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tree_dnd_yes.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tree_file.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tree_folder.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tree_folder_open.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\tree_loading.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\validatebox_pointer.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\validatebox_warning.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\layout.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\linkbutton.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\menu.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\menubutton.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\messager.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\pagination.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\panel.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\spinner.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\splitbutton.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\tabs.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\tree.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\validatebox.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\window.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\accordion.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\calendar.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\combo.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\combobox.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\datagrid.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\datebox.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\dialog.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\easyui.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\accordion_collapse.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\accordion_expand.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\button_a_bg.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\button_plain_hover.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\button_span_bg.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\calendar_nextmonth.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\calendar_nextyear.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\calendar_prevmonth.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\calendar_prevyear.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\combo_arrow.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\datagrid_header_bg.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\datagrid_row_collapse.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\datagrid_row_expand.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\datagrid_sort_asc.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\datagrid_sort_desc.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\datagrid_title_bg.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\datebox_arrow.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\layout_button_down.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\layout_button_left.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\layout_button_right.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\layout_button_up.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\menu.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\menu_downarrow.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\menu_rightarrow.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\menu_sep.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\menu_split_downarrow.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\messager_error.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\messager_info.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\messager_question.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\messager_warning.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\pagination_first.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\pagination_last.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\pagination_load.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\pagination_loading.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\pagination_next.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\pagination_prev.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\panel_loading.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\panel_title.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\panel_tools.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\panel_tool_collapse.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\panel_tool_expand.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\spinner_arrow_down.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\spinner_arrow_up.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tabs_close.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tabs_enabled.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tabs_leftarrow.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tabs_rightarrow.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tree_arrows.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tree_checkbox_0.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tree_checkbox_1.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tree_checkbox_2.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tree_dnd_no.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tree_dnd_yes.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tree_file.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tree_folder.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tree_folder_open.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\tree_loading.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\validatebox_pointer.gif" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\validatebox_warning.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\layout.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\linkbutton.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\menu.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\menubutton.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\messager.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\pagination.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\panel.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\spinner.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\splitbutton.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\tabs.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\tree.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\validatebox.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\window.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icon.css" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\back.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\cancel.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\cut.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\edit_add.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\edit_remove.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\filesave.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\help.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\no.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\ok.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\pencil.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\print.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\redo.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\reload.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\search.png" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\icons\undo.png" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.blind.js" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.bounce.js" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.clip.js" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.core.js" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.drop.js" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.explode.js" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.fold.js" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.highlight.js" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.pulsate.js" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.scale.js" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.shake.js" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.slide.js" />
+    <Content Include="Scripts\Shared\jQueryUI\effects.transfer.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\jquery-ui-i18n.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-ar.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-bg.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-ca.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-cs.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-da.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-de.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-el.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-eo.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-es.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-fa.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-fi.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-fr.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-he.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-hr.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-hu.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-hy.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-id.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-is.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-it.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-ja.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-ko.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-lt.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-lv.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-ms.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-nl.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-no.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-pl.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-pt-BR.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-ro.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-ru.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-sk.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-sl.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-sq.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-sr-SR.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-sr.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-sv.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-th.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-tr.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-uk.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-zh-CN.js" />
+    <Content Include="Scripts\Shared\jQueryUI\i18n\ui.datepicker-zh-TW.js" />
+    <Content Include="Scripts\Shared\jQueryUI\jquery-ui.js" />
+    <Content Include="Scripts\Shared\jQueryUI\jquery.ui.mouse.js" />
+    <Content Include="Scripts\Shared\jQueryUI\jquery.ui.widget.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.accordion.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.core.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.datepicker.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.datetimepicker.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.dialog.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.draggable.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.droppable.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.progressbar.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.resizable.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.selectable.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.slider.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.sortable.js" />
+    <Content Include="Scripts\Shared\jQueryUI\ui.tabs.js" />
+    <Content Include="Scripts\Shared\jsloader.js" />
+    <Content Include="Scripts\Shared\JsTree\jquery.jstree.js" />
+    <Content Include="Scripts\Shared\JsTree\JScript1.js" />
+    <Content Include="Scripts\Shared\JsTree\参考.js" />
+    <Content Include="Scripts\Shared\Master.js" />
+    <Content Include="Scripts\Shared\MaterialList.js" />
+    <Content Include="Scripts\Shared\Session.js" />
+    <Content Include="Scripts\Shared\SupplierList.js" />
+    <Content Include="Scripts\Shared\upload.js" />
+    <Content Include="Scripts\Shared\uploadfiy\expressInstall.swf" />
+    <Content Include="Scripts\Shared\uploadfiy\jquery.uploadify.min.js" />
+    <Content Include="Scripts\Shared\uploadfiy\jquery.uploadify.v2.1.4.js" />
+    <Content Include="Scripts\Shared\uploadfiy\swfobject.js" />
+    <Content Include="Scripts\Shared\uploadfiy\uploadify.allglyphs.swf" />
+    <Content Include="Scripts\Shared\uploadfiy\uploadify.css" />
+    <Content Include="Scripts\Shared\WarehouseList.js" />
+    <Content Include="Scripts\Shared\WinOpen.js" />
+    <Content Include="Views\Area\Index.aspx" />
+    <Content Include="Views\Area\Operation.aspx" />
+    <Content Include="Views\Area\SConfigTemplate.aspx" />
+    <Content Include="Views\Area\StationAct.aspx" />
+    <Content Include="Views\Area\StationChart.aspx" />
+    <Content Include="Views\Area\StationConfig.aspx" />
+    <Content Include="Views\Area\StationMark.aspx" />
+    <Content Include="Views\Area\StationOperation.aspx" />
+    <Content Include="Views\Audit\Index.aspx" />
+    <Content Include="Views\Audit\Template.aspx" />
+    <Content Include="Views\Audit\Templdate.aspx" />
+    <Content Include="Views\Desktop\index.aspx" />
+    <Content Include="Views\Dict\ChartReport\CommTrend.aspx" />
+    <Content Include="Views\Dict\Index.aspx" />
+    <Content Include="Views\Dict\Test.aspx" />
+    <Content Include="Views\Doc\Index.aspx" />
+    <Content Include="Views\Doc\Mark.aspx" />
+    <Content Include="Views\Home\center.aspx" />
+    <Content Include="Views\Home\down.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\left.aspx" />
+    <Content Include="Views\Home\Login.aspx" />
+    <Content Include="Views\Home\mid.aspx" />
+    <Content Include="Views\Home\right.aspx" />
+    <Content Include="Views\Home\tab.aspx" />
+    <Content Include="Views\Home\top.aspx" />
+    <Content Include="Views\Permission\Index.aspx" />
+    <Content Include="Views\Permission\PerAllot.aspx" />
+    <Content Include="Views\Permission\Role.aspx" />
+    <Content Include="Views\Permission\RoleAllot.aspx" />
+    <Content Include="Views\Permission\StuffCate.aspx" />
+    <Content Include="Views\Shared\AttachmentsControl.ascx" />
+    <Content Include="Views\Shared\AuditControl.ascx" />
+    <Content Include="Views\Shared\AutoLoadModuleJs.ascx" />
+    <Content Include="Views\Shared\BakControl.ascx" />
+    <Content Include="Views\Shared\ButtonControl.ascx" />
+    <Content Include="Views\Shared\ChartControl.ascx" />
+    <Content Include="Views\Shared\ConfirmMessageControl.ascx" />
+    <Content Include="Views\Shared\DialogControl.ascx" />
+    <Content Include="Views\Shared\DictAdministration.ascx" />
+    <Content Include="Views\Shared\DictControl.ascx" />
+    <Content Include="Views\Shared\EmployeesControl.ascx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\FCKEditor.ascx" />
+    <Content Include="Views\Shared\FileRemoveExtend.ascx" />
+    <Content Include="Views\Shared\GChartControl.ascx" />
+    <Content Include="Views\Shared\GridControl.ascx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\MarkControl.ascx" />
+    <Content Include="Views\Shared\SeekControl.ascx" />
+    <Content Include="Views\Shared\StatusControl.ascx" />
+    <Content Include="Views\Shared\ToolBarControl.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\DatePicker.cshtml" />
+    <Content Include="Views\Shared\_BLayout.cshtml" />
+    <Content Include="Views\Shared\_MLayout.cshtml" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\default\images\Thumbs.db" />
+    <Content Include="Scripts\Shared\JqueryEasyUI\themes\gray\images\Thumbs.db" />
+    <Content Include="Views\Shared\BasePage.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Scripts\Module\HR\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChartLib\ChartLib.csproj">
+      <Project>{b69404ea-cf9f-4d8c-8c9e-db7ad446d6b2}</Project>
+      <Name>ChartLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HtmlHelper\QX.HtmlHelperLib.csproj">
+      <Project>{ca9abaaa-9507-498d-88ab-981faadfa4f9}</Project>
+      <Name>QX.HtmlHelperLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QX.BLL\QX.BLL.csproj">
+      <Project>{c9c96b92-850e-4188-9206-282c63bedfdb}</Project>
+      <Name>QX.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QX.Cache\QX.Cache.csproj">
+      <Project>{04a4247c-6631-480f-848f-1cb3d88d2596}</Project>
+      <Name>QX.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QX.Comm\QX.Comm.csproj">
+      <Project>{fcb48be6-4e65-48fe-bfb1-c27e5528d311}</Project>
+      <Name>QX.Comm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QX.Config\QX.Config.csproj">
+      <Project>{9b85b99a-7a14-46ff-9c58-db2cd1a3d618}</Project>
+      <Name>QX.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QX.Control\QX.Control.csproj">
+      <Project>{ea0be48e-2383-4ea3-9204-61a8eae1c976}</Project>
+      <Name>QX.Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QX.DeskConfig\QX.DeskConfig.csproj">
+      <Project>{dc0618cd-2f7e-476f-8a4c-537283ed9120}</Project>
+      <Name>QX.DeskConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QX.Event\QX.AOP.csproj">
+      <Project>{8dc667db-2b77-4a81-9b63-829bce43c603}</Project>
+      <Name>QX.AOP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QX.MenuHelper\QX.MenuHelper.csproj">
+      <Project>{8ea65d3a-908f-4e4e-b15d-dfbf98732775}</Project>
+      <Name>QX.MenuHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QX.Model\QX.Model.csproj">
+      <Project>{af56d9ae-6251-4c2f-9397-db011bc274cb}</Project>
+      <Name>QX.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QX.Permission\QX.Permission.csproj">
+      <Project>{7630ad24-f23f-4431-be41-42b50fd6c99a}</Project>
+      <Name>QX.Permission</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:18178/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

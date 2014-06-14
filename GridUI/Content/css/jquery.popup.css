@@ -1,0 +1,56 @@
+ .pop
+        {
+            position: absolute;
+            display: inline;
+        }
+        .pop .pop_menu
+        {
+            display: none;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+        }
+        .pop .pop_toggle
+        {
+            background-image: url(/Content/images/arrow-down.gif);
+            background-repeat: no-repeat;
+            /*background-position: center center;*/
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .active .pop_menu
+        {
+            display: block;
+            background-color: #F594A2;
+            color: #fff;
+            position: absolute; 
+           /* padding: 30px;*/
+            /*width: 12em;*/
+            
+            padding:20px 10px 10px 10px
+          
+        }
+        .active .pop_menu a
+        {
+            color: #fff;
+        }
+        .active .pop_toggle
+        {
+            z-index: 2000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(/Content/images/arrow-up.gif);
+        }
+        .dropshadow2
+        {
+            float: left;
+            clear: left;
+            background: url(http://www.codefans.net/jscss/demoimg/200903/shadowAlpha.png) no-repeat bottom right !important;
+            background: url(http://www.codefans.net/jscss/demoimg/200903/shadow.gif) no-repeat bottom right;
+            margin: 10px 0 10px 10px !important;
+            margin: 10px 0 10px 5px;
+            width: 360px;
+            padding: 0px;
+        }
