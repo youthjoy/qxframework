@@ -86,10 +86,6 @@
       <Project>{3C48CD74-EDC7-4945-8624-53CE5222B422}</Project>
       <Name>QX.DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\QX.Log\QX.Log.csproj">
-      <Project>{1C128DB1-7EFC-4BE0-B981-7F98CB171C42}</Project>
-      <Name>QX.Log</Name>
-    </ProjectReference>
     <ProjectReference Include="..\QX.Model\QX.Model.csproj">
       <Project>{AF56D9AE-6251-4C2F-9397-DB011BC274CB}</Project>
       <Name>QX.Model</Name>
