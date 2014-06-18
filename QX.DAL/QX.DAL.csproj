@@ -95,7 +95,7 @@
       <Name>QX.Config</Name>
     </ProjectReference>
     <ProjectReference Include="..\QX.Log\QX.Log.csproj">
-      <Project>{1c128db1-7efc-4be0-b981-7f98cb171c42}</Project>
+      <Project>{a93234cd-d746-43e3-a3ef-edc85f8cd353}</Project>
       <Name>QX.Log</Name>
     </ProjectReference>
     <ProjectReference Include="..\QX.Model\QX.Model.csproj">

@@ -76,8 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QX.Cache\QX.Cache.csproj">
-      <Project>{04a4247c-6631-480f-848f-1cb3d88d2596}</Project>
+      <Project>{533c5274-73a1-46c7-b6cf-111f5e5df09b}</Project>
       <Name>QX.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QX.Log\QX.Log.csproj">
+      <Project>{a93234cd-d746-43e3-a3ef-edc85f8cd353}</Project>
+      <Name>QX.Log</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -74,10 +74,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\QX.Cache\QX.Cache.csproj">
-      <Project>{04a4247c-6631-480f-848f-1cb3d88d2596}</Project>
-      <Name>QX.Cache</Name>
-    </ProjectReference>
     <ProjectReference Include="..\QX.Comm\QX.Comm.csproj">
       <Project>{FCB48BE6-4E65-48FE-BFB1-C27E5528D311}</Project>
       <Name>QX.Comm</Name>
@@ -91,7 +87,7 @@
       <Name>QX.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\QX.Log\QX.Log.csproj">
-      <Project>{1c128db1-7efc-4be0-b981-7f98cb171c42}</Project>
+      <Project>{a93234cd-d746-43e3-a3ef-edc85f8cd353}</Project>
       <Name>QX.Log</Name>
     </ProjectReference>
     <ProjectReference Include="..\QX.Model\QX.Model.csproj">

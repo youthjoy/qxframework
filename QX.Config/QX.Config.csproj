@@ -87,12 +87,6 @@
     <Compile Include="TabParse.cs" />
     <Compile Include="ToolBar.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\QX.Log\QX.Log.csproj">
-      <Project>{1c128db1-7efc-4be0-b981-7f98cb171c42}</Project>
-      <Name>QX.Log</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -86,10 +86,6 @@
       <Project>{9B85B99A-7A14-46FF-9C58-DB2CD1A3D618}</Project>
       <Name>QX.Config</Name>
     </ProjectReference>
-    <ProjectReference Include="..\QX.Log\QX.Log.csproj">
-      <Project>{1C128DB1-7EFC-4BE0-B981-7F98CB171C42}</Project>
-      <Name>QX.Log</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
