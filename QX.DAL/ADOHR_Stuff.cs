@@ -2166,6 +2166,111 @@ namespace QX.DAL
           }catch (System.Exception ex){ throw ex; }  finally { if (dr != null) { dr.Close(); } if (idb.GetConnection() != null && idb.GetConnection().State == ConnectionState.Open) { idb.GetConnection().Close(); }   }  
          return hR_Stuff;
       }
+
+      public List<HR_Stuff> GetListByWhere(string strCondition, Dictionary<string, string> where)
+      {
+          List<HR_Stuff> ret = new List<HR_Stuff>();
+          string sql = "SELECT  Stuff_ID,Stuff_Code,Stuff_Name,Stuff_ENName,Stuff_Duty,Stuff_DutyCode,Stuff_Title,Stuff_DepCode,Stuff_DepName,Stuff_Director,Stuff_DirectorCode,Stuff_OTel,Stuff_Mobile,Stuff_Email,Stuff_Fax,Stuff_HTel,Stuff_Addr,Stuff_Start,Stuff_Left,Stuff_Stat,Stuff_Gender,Stuff_Birth,Stuff_Nation,Stuff_Province,Stuff_Salary,Stuff_Cost,Stuff_Type,Stuff_InsuraceStat,Stuff_Edu,Stat,CreateDate,Creator,Stuff_UserName,Stuff_Password,Stuff_LoginType,Stuff_ShortTel,Stuff_WorkNo,Stuff_TechLevel,Stuff_Heath,Stuff_InDate,Stuff_TurnDate,Stuff_TradeDate,Stuff_SignStartDate,Stuff_SingEndDate,Stuff_SpeicalCard,Stuff_FinishSchool,Stuff_Major,Stuff_IsResume,Stuff_IsPic,Stuff_IsIDCard,Stuff_IsHouseHod,Stuff_FinishCard,Stuff_TechnicalCard,Stuff_OperationCard,Stuff_QualificationCard,Stuff_RelaseContract,Stuff_TurnPaper,Stuff_Trasfer,Stuff_HeathPaper,Stuff_AnnoucePaper,Stuff_AssurePaper,Stuff_OnTrialContract,Stuff_ContractChangeBody,Stuff_ContractCompany,Stuff_ContractCompanyCode,Stuff_FileRecord,Stuff_FileRecordRemove,UpdateTime,DeleteTime,Stuff_Bak,Stuff_Role,Stuff_RoleName,CreateTime FROM HR_Stuff WHERE 1=1 AND ((Stat is null) or (Stat=0) ) ";
+          if (!string.IsNullOrEmpty(strCondition))
+          {
+              strCondition.Replace('\'', '"'); //防sql注入
+              sql += strCondition;
+          }
+
+          foreach (var d in where)
+          {
+              idb.AddParameter("@" + d.Key, d.Value);
+          }
+
+          //sql += " ORDER BY Stuff_ID DESC "; 
+          SqlDataReader dr = null;
+          try
+          {
+              dr = (SqlDataReader)idb.ReturnReader(sql);
+              while (dr.Read())
+              {
+                  HR_Stuff hR_Stuff = new HR_Stuff();
+                  if (dr["Stuff_ID"] != DBNull.Value) hR_Stuff.Stuff_ID = Convert.ToDecimal(dr["Stuff_ID"]);
+                  if (dr["Stuff_Code"] != DBNull.Value) hR_Stuff.Stuff_Code = Convert.ToString(dr["Stuff_Code"]);
+                  if (dr["Stuff_Name"] != DBNull.Value) hR_Stuff.Stuff_Name = Convert.ToString(dr["Stuff_Name"]);
+                  if (dr["Stuff_ENName"] != DBNull.Value) hR_Stuff.Stuff_ENName = Convert.ToString(dr["Stuff_ENName"]);
+                  if (dr["Stuff_Duty"] != DBNull.Value) hR_Stuff.Stuff_Duty = Convert.ToString(dr["Stuff_Duty"]);
+                  if (dr["Stuff_DutyCode"] != DBNull.Value) hR_Stuff.Stuff_DutyCode = Convert.ToString(dr["Stuff_DutyCode"]);
+                  if (dr["Stuff_Title"] != DBNull.Value) hR_Stuff.Stuff_Title = Convert.ToString(dr["Stuff_Title"]);
+                  if (dr["Stuff_DepCode"] != DBNull.Value) hR_Stuff.Stuff_DepCode = Convert.ToString(dr["Stuff_DepCode"]);
+                  if (dr["Stuff_DepName"] != DBNull.Value) hR_Stuff.Stuff_DepName = Convert.ToString(dr["Stuff_DepName"]);
+                  if (dr["Stuff_Director"] != DBNull.Value) hR_Stuff.Stuff_Director = Convert.ToString(dr["Stuff_Director"]);
+                  if (dr["Stuff_DirectorCode"] != DBNull.Value) hR_Stuff.Stuff_DirectorCode = Convert.ToString(dr["Stuff_DirectorCode"]);
+                  if (dr["Stuff_OTel"] != DBNull.Value) hR_Stuff.Stuff_OTel = Convert.ToString(dr["Stuff_OTel"]);
+                  if (dr["Stuff_Mobile"] != DBNull.Value) hR_Stuff.Stuff_Mobile = Convert.ToString(dr["Stuff_Mobile"]);
+                  if (dr["Stuff_Email"] != DBNull.Value) hR_Stuff.Stuff_Email = Convert.ToString(dr["Stuff_Email"]);
+                  if (dr["Stuff_Fax"] != DBNull.Value) hR_Stuff.Stuff_Fax = Convert.ToString(dr["Stuff_Fax"]);
+                  if (dr["Stuff_HTel"] != DBNull.Value) hR_Stuff.Stuff_HTel = Convert.ToString(dr["Stuff_HTel"]);
+                  if (dr["Stuff_Addr"] != DBNull.Value) hR_Stuff.Stuff_Addr = Convert.ToString(dr["Stuff_Addr"]);
+                  if (dr["Stuff_Start"] != DBNull.Value) hR_Stuff.Stuff_Start = Convert.ToString(dr["Stuff_Start"]);
+                  if (dr["Stuff_Left"] != DBNull.Value) hR_Stuff.Stuff_Left = Convert.ToString(dr["Stuff_Left"]);
+                  if (dr["Stuff_Stat"] != DBNull.Value) hR_Stuff.Stuff_Stat = Convert.ToString(dr["Stuff_Stat"]);
+                  if (dr["Stuff_Gender"] != DBNull.Value) hR_Stuff.Stuff_Gender = Convert.ToString(dr["Stuff_Gender"]);
+                  if (dr["Stuff_Birth"] != DBNull.Value) hR_Stuff.Stuff_Birth = Convert.ToString(dr["Stuff_Birth"]);
+                  if (dr["Stuff_Nation"] != DBNull.Value) hR_Stuff.Stuff_Nation = Convert.ToString(dr["Stuff_Nation"]);
+                  if (dr["Stuff_Province"] != DBNull.Value) hR_Stuff.Stuff_Province = Convert.ToString(dr["Stuff_Province"]);
+                  if (dr["Stuff_Salary"] != DBNull.Value) hR_Stuff.Stuff_Salary = Convert.ToInt64(dr["Stuff_Salary"]);
+                  if (dr["Stuff_Cost"] != DBNull.Value) hR_Stuff.Stuff_Cost = Convert.ToString(dr["Stuff_Cost"]);
+                  if (dr["Stuff_Type"] != DBNull.Value) hR_Stuff.Stuff_Type = Convert.ToString(dr["Stuff_Type"]);
+                  if (dr["Stuff_InsuraceStat"] != DBNull.Value) hR_Stuff.Stuff_InsuraceStat = Convert.ToString(dr["Stuff_InsuraceStat"]);
+                  if (dr["Stuff_Edu"] != DBNull.Value) hR_Stuff.Stuff_Edu = Convert.ToString(dr["Stuff_Edu"]);
+                  if (dr["Stat"] != DBNull.Value) hR_Stuff.Stat = Convert.ToInt32(dr["Stat"]);
+                  if (dr["CreateDate"] != DBNull.Value) hR_Stuff.CreateDate = Convert.ToDateTime(dr["CreateDate"]);
+                  if (dr["Creator"] != DBNull.Value) hR_Stuff.Creator = Convert.ToString(dr["Creator"]);
+                  if (dr["Stuff_UserName"] != DBNull.Value) hR_Stuff.Stuff_UserName = Convert.ToString(dr["Stuff_UserName"]);
+                  if (dr["Stuff_Password"] != DBNull.Value) hR_Stuff.Stuff_Password = Convert.ToString(dr["Stuff_Password"]);
+                  if (dr["Stuff_LoginType"] != DBNull.Value) hR_Stuff.Stuff_LoginType = Convert.ToString(dr["Stuff_LoginType"]);
+                  if (dr["Stuff_ShortTel"] != DBNull.Value) hR_Stuff.Stuff_ShortTel = Convert.ToString(dr["Stuff_ShortTel"]);
+                  if (dr["Stuff_WorkNo"] != DBNull.Value) hR_Stuff.Stuff_WorkNo = Convert.ToString(dr["Stuff_WorkNo"]);
+                  if (dr["Stuff_TechLevel"] != DBNull.Value) hR_Stuff.Stuff_TechLevel = Convert.ToString(dr["Stuff_TechLevel"]);
+                  if (dr["Stuff_Heath"] != DBNull.Value) hR_Stuff.Stuff_Heath = Convert.ToString(dr["Stuff_Heath"]);
+                  if (dr["Stuff_InDate"] != DBNull.Value) hR_Stuff.Stuff_InDate = Convert.ToString(dr["Stuff_InDate"]);
+                  if (dr["Stuff_TurnDate"] != DBNull.Value) hR_Stuff.Stuff_TurnDate = Convert.ToString(dr["Stuff_TurnDate"]);
+                  if (dr["Stuff_TradeDate"] != DBNull.Value) hR_Stuff.Stuff_TradeDate = Convert.ToString(dr["Stuff_TradeDate"]);
+                  if (dr["Stuff_SignStartDate"] != DBNull.Value) hR_Stuff.Stuff_SignStartDate = Convert.ToString(dr["Stuff_SignStartDate"]);
+                  if (dr["Stuff_SingEndDate"] != DBNull.Value) hR_Stuff.Stuff_SingEndDate = Convert.ToString(dr["Stuff_SingEndDate"]);
+                  if (dr["Stuff_SpeicalCard"] != DBNull.Value) hR_Stuff.Stuff_SpeicalCard = Convert.ToString(dr["Stuff_SpeicalCard"]);
+                  if (dr["Stuff_FinishSchool"] != DBNull.Value) hR_Stuff.Stuff_FinishSchool = Convert.ToString(dr["Stuff_FinishSchool"]);
+                  if (dr["Stuff_Major"] != DBNull.Value) hR_Stuff.Stuff_Major = Convert.ToString(dr["Stuff_Major"]);
+                  if (dr["Stuff_IsResume"] != DBNull.Value) hR_Stuff.Stuff_IsResume = Convert.ToString(dr["Stuff_IsResume"]);
+                  if (dr["Stuff_IsPic"] != DBNull.Value) hR_Stuff.Stuff_IsPic = Convert.ToString(dr["Stuff_IsPic"]);
+                  if (dr["Stuff_IsIDCard"] != DBNull.Value) hR_Stuff.Stuff_IsIDCard = Convert.ToString(dr["Stuff_IsIDCard"]);
+                  if (dr["Stuff_IsHouseHod"] != DBNull.Value) hR_Stuff.Stuff_IsHouseHod = Convert.ToString(dr["Stuff_IsHouseHod"]);
+                  if (dr["Stuff_FinishCard"] != DBNull.Value) hR_Stuff.Stuff_FinishCard = Convert.ToString(dr["Stuff_FinishCard"]);
+                  if (dr["Stuff_TechnicalCard"] != DBNull.Value) hR_Stuff.Stuff_TechnicalCard = Convert.ToString(dr["Stuff_TechnicalCard"]);
+                  if (dr["Stuff_OperationCard"] != DBNull.Value) hR_Stuff.Stuff_OperationCard = Convert.ToString(dr["Stuff_OperationCard"]);
+                  if (dr["Stuff_QualificationCard"] != DBNull.Value) hR_Stuff.Stuff_QualificationCard = Convert.ToString(dr["Stuff_QualificationCard"]);
+                  if (dr["Stuff_RelaseContract"] != DBNull.Value) hR_Stuff.Stuff_RelaseContract = Convert.ToString(dr["Stuff_RelaseContract"]);
+                  if (dr["Stuff_TurnPaper"] != DBNull.Value) hR_Stuff.Stuff_TurnPaper = Convert.ToString(dr["Stuff_TurnPaper"]);
+                  if (dr["Stuff_Trasfer"] != DBNull.Value) hR_Stuff.Stuff_Trasfer = Convert.ToString(dr["Stuff_Trasfer"]);
+                  if (dr["Stuff_HeathPaper"] != DBNull.Value) hR_Stuff.Stuff_HeathPaper = Convert.ToString(dr["Stuff_HeathPaper"]);
+                  if (dr["Stuff_AnnoucePaper"] != DBNull.Value) hR_Stuff.Stuff_AnnoucePaper = Convert.ToString(dr["Stuff_AnnoucePaper"]);
+                  if (dr["Stuff_AssurePaper"] != DBNull.Value) hR_Stuff.Stuff_AssurePaper = Convert.ToString(dr["Stuff_AssurePaper"]);
+                  if (dr["Stuff_OnTrialContract"] != DBNull.Value) hR_Stuff.Stuff_OnTrialContract = Convert.ToString(dr["Stuff_OnTrialContract"]);
+                  if (dr["Stuff_ContractChangeBody"] != DBNull.Value) hR_Stuff.Stuff_ContractChangeBody = Convert.ToString(dr["Stuff_ContractChangeBody"]);
+                  if (dr["Stuff_ContractCompany"] != DBNull.Value) hR_Stuff.Stuff_ContractCompany = Convert.ToString(dr["Stuff_ContractCompany"]);
+                  if (dr["Stuff_ContractCompanyCode"] != DBNull.Value) hR_Stuff.Stuff_ContractCompanyCode = Convert.ToString(dr["Stuff_ContractCompanyCode"]);
+                  if (dr["Stuff_FileRecord"] != DBNull.Value) hR_Stuff.Stuff_FileRecord = Convert.ToString(dr["Stuff_FileRecord"]);
+                  if (dr["Stuff_FileRecordRemove"] != DBNull.Value) hR_Stuff.Stuff_FileRecordRemove = Convert.ToString(dr["Stuff_FileRecordRemove"]);
+                  if (dr["UpdateTime"] != DBNull.Value) hR_Stuff.UpdateTime = Convert.ToDateTime(dr["UpdateTime"]);
+                  if (dr["DeleteTime"] != DBNull.Value) hR_Stuff.DeleteTime = Convert.ToDateTime(dr["DeleteTime"]);
+                  if (dr["Stuff_Bak"] != DBNull.Value) hR_Stuff.Stuff_Bak = Convert.ToString(dr["Stuff_Bak"]);
+                  if (dr["Stuff_Role"] != DBNull.Value) hR_Stuff.Stuff_Role = Convert.ToString(dr["Stuff_Role"]);
+                  if (dr["Stuff_RoleName"] != DBNull.Value) hR_Stuff.Stuff_RoleName = Convert.ToString(dr["Stuff_RoleName"]);
+                  if (dr["CreateTime"] != DBNull.Value) hR_Stuff.CreateTime = Convert.ToDateTime(dr["CreateTime"]);
+                  ret.Add(hR_Stuff);
+              }
+          }
+          catch (System.Exception ex) { throw ex; }
+          finally { if (dr != null) { dr.Close(); } if (idb.GetConnection() != null && idb.GetConnection().State == ConnectionState.Open) { idb.GetConnection().Close(); } }
+          return ret;
+      }
+
       /// <summary>
       /// 获取指定的员工信息 HR_Stuff对象集合
       /// </summary>
@@ -2178,6 +2283,8 @@ namespace QX.DAL
             strCondition.Replace('\'','"'); //防sql注入
             sql += strCondition ;
          }
+
+
           sql += " ORDER BY Stuff_ID DESC "; 
           SqlDataReader dr=null;  
            try {  
