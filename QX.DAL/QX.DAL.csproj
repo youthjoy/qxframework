@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QX.DAL</RootNamespace>
     <AssemblyName>QX.DAL</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>
     </SccProjectName>
@@ -25,6 +25,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,6 +35,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,6 +44,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="QX.DataAcess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -88,8 +91,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QX.Config\QX.Config.csproj">
-      <Project>{9B85B99A-7A14-46FF-9C58-DB2CD1A3D618}</Project>
+      <Project>{9b85b99a-7a14-46ff-9c58-db2cd1a3d618}</Project>
       <Name>QX.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QX.Log\QX.Log.csproj">
+      <Project>{1c128db1-7efc-4be0-b981-7f98cb171c42}</Project>
+      <Name>QX.Log</Name>
     </ProjectReference>
     <ProjectReference Include="..\QX.Model\QX.Model.csproj">
       <Project>{AF56D9AE-6251-4C2F-9397-DB011BC274CB}</Project>

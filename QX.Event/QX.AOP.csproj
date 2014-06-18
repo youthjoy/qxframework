@@ -51,10 +51,6 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\QX.UI\Dll\System.Data.SQLite.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq">
@@ -72,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QX.Config\QX.Config.csproj">
-      <Project>{9B85B99A-7A14-46FF-9C58-DB2CD1A3D618}</Project>
+      <Project>{9b85b99a-7a14-46ff-9c58-db2cd1a3d618}</Project>
       <Name>QX.Config</Name>
     </ProjectReference>
     <ProjectReference Include="..\QX.Log\QX.Log.csproj">
@@ -80,7 +76,7 @@
       <Name>QX.Log</Name>
     </ProjectReference>
     <ProjectReference Include="..\QX.Permission\QX.Permission.csproj">
-      <Project>{7630AD24-F23F-4431-BE41-42B50FD6C99A}</Project>
+      <Project>{7630ad24-f23f-4431-be41-42b50fd6c99a}</Project>
       <Name>QX.Permission</Name>
     </ProjectReference>
   </ItemGroup>
