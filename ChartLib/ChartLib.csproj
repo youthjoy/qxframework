@@ -43,7 +43,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\GridUI\Dll\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="QX.DataAcess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="QX.DataAcess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QX.DAL\Dll\QX.DataAcess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
